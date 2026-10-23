@@ -16,6 +16,8 @@ WHAT IS NEW
 - Section-specific ion, molecule, orbital, equation, and reaction-balancing challenges.
 - Concept rounds, five-question problem trails, and reversible recall decks.
 - Colorful chapter and game menus with shorter instructions and optional help.
+- Sidebar shortcuts for every chemistry game, with a Topic selector inside each.
+- Settings at the bottom of the sidebar; dark mode is available inside Settings.
 - Levels, XP, badges, and progress dashboards removed.
 - Lectures 26–28 added to Chapter 8, with PDF page references.
 - Existing chapter grouping, saved practice sets, exam practice, and sources retained.
