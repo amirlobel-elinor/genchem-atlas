@@ -1,4 +1,4 @@
-GEN CHEM ATLAS — INTERACTIVE CHEMISTRY EDITION
+Gen Chem Atlas — INTERACTIVE CHEMISTRY EDITION
 
 Upload every file in this ZIP directly to the root of your GitHub repository.
 There are no nested folders. index.html is the website entry point.
@@ -13,6 +13,8 @@ UPDATING YOUR GITHUB SITE
 6. If the old app appears, reload with your browser cache bypassed.
 
 WHAT IS NEW
+- Restored Gen Chem Atlas branding and the Ca icon.
+- Compact suggestion box below the sidebar utilities.
 - Section-specific ion, molecule, orbital, equation, and reaction-balancing challenges.
 - Concept rounds, five-question problem trails, and reversible recall decks.
 - Colorful chapter and game menus with shorter instructions and optional help.
@@ -21,6 +23,14 @@ WHAT IS NEW
 - Levels, XP, badges, and progress dashboards removed.
 - Lectures 26–28 added to Chapter 8, with PDF page references.
 - Existing chapter grouping, saved practice sets, exam practice, and sources retained.
+
+SUGGESTIONS
+The Suggestion box below Settings asks: What would help you study?
+Choose a study idea, feature request, or problem, then write your message.
+Open email draft addresses it to amirlobe@usc.edu; press Send in your email app.
+This static app does not send email automatically or use an external form service.
+If no email app opens, use Copy feedback and paste it into webmail.
+Feedback text remains available while this page is open; it is not saved in backups.
 
 SAVED DATA
 The app runs without a build step or account. Core study content works offline.
