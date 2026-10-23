@@ -13,12 +13,16 @@ UPDATING YOUR GITHUB SITE
 6. If the old app appears, reload with your browser cache bypassed.
 
 WHAT IS NEW
-- Restored Gen Chem Atlas branding and the Ca icon.
+- A categorized Chemistry games directory with all ten activities.
+- Visible topic buttons with chapter choices for larger topic collections.
+- Manual Lewis structures: count valence electrons, then place every bond and pair.
+- Resonance lab: electron-pushing arrows, contributors, and resonance hybrids.
+- Shape lab: rotatable 3D models and electron vs. molecular geometry.
 - Compact suggestion box below the sidebar utilities.
 - Section-specific ion, molecule, orbital, equation, and reaction-balancing challenges.
 - Concept rounds, five-question problem trails, and reversible recall decks.
 - Colorful chapter and game menus with shorter instructions and optional help.
-- Sidebar shortcuts for every chemistry game, with a Topic selector inside each.
+- Sidebar shortcuts for every chemistry game, with visible topic buttons inside each.
 - Settings at the bottom of the sidebar; dark mode is available inside Settings.
 - Levels, XP, badges, and progress dashboards removed.
 - Lectures 26–28 added to Chapter 8, with PDF page references.
@@ -45,7 +49,9 @@ current visit.
 SCIENCE & SCOPE
 Original exercises follow the supplied lectures and exams and map to Chemistry 2e.
 Chapter 9 is still exam-supported; Chapter 8 now includes Lectures 26–28.
-The molecule builder uses fixed Lewis scaffolds, not an arbitrary 3D editor.
+The Lewis builder starts with unconnected atoms on a fixed scaffold.
+Resonance exercises use equivalent contributors on fixed atom frameworks.
+The shape models are idealized VSEPR teaching models, not measured geometries.
 Orbital energy spacing and molecule sketches are schematic. Any course-specific
 MO order is displayed. Hints/solutions are marked as assisted practice.
 

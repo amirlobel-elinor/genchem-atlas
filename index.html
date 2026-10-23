@@ -103,6 +103,31 @@ body{background:var(--bg)}.shell{max-width:1200px}.course-head{position:relative
 @media(max-width:1050px){.mb-workspace{grid-template-columns:minmax(0,1fr);gap:20px}.mb-canvas{position:static}.mb-canvas svg{max-height:300px}.mb-controls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.mb-controls>.mb-step-heading{grid-column:1 / -1;margin-bottom:0}.mb-control-group{margin:0}.mb-bond-row{flex-wrap:wrap;gap:7px}.mb-bond-row>span{min-width:55px}}
 @media(max-width:600px){.mb-toolbar{align-items:start;gap:10px}.mb-challenge-label{min-width:0;flex:1}.mb-challenge-label select{font-size:14px;padding-left:10px}.mb-round-label{font-size:11px;padding-top:30px;white-space:normal;text-align:right;max-width:70px}.mb-brief{gap:16px;display:grid;grid-template-columns:1fr}.mb-brief h2{font-size:31px}.mb-brief h2 span{font-size:14px}.mb-brief p{font-size:15px}.mb-budget{min-width:0;display:grid;grid-template-columns:auto 1fr;gap:3px 14px;text-align:left;align-items:center;padding:13px 16px}.mb-budget b{grid-row:1 / 3;font-size:25px}.mb-budget b small{font-size:16px}.mb-budget>span{margin:0;font-size:11px}.mb-budget strong{font-size:12px}.mb-canvas{padding:14px}.mb-canvas svg{margin:10px auto;max-height:280px}.mb-controls{grid-template-columns:1fr;gap:16px}.mb-control-group{padding:17px}.mb-bond-row{flex-wrap:nowrap}.mb-theory{padding:18px}.mb-theory-fields{grid-template-columns:1fr}.mb-feedback{padding:18px;font-size:14px}.mb-feedback>strong{font-size:17px}.mb-actions>.actions{width:100%}.mb-actions .btn{font-size:13px}.mb-pair-header,.mb-pair-row{grid-template-columns:minmax(52px,1fr) 123px 45px}.mb-stepper button{width:42px;height:42px}.mb-stepper output{width:37px}.mb-order{min-width:48px;min-height:44px}}
 @media(prefers-reduced-motion:reduce){.mb-canvas{transition:none}}
+.mb-count-panel{max-width:720px;padding:25px;border:1px solid var(--line);border-radius:16px;background:var(--paper)}
+.mb-count-entry>label{display:block;font-size:16px;font-weight:650;margin-bottom:11px}
+.mb-count-entry>div{display:flex;align-items:stretch;gap:12px}
+.mb-count-entry input{width:125px;min-width:80px;min-height:48px;border:2px solid var(--accent);background:var(--soft);color:var(--ink);border-radius:10px;padding:9px 15px;font:700 23px var(--mono);text-align:center}
+.mb-count-entry small{display:block;font-size:12px;color:var(--muted);margin:9px 0 18px}
+.mb-count-panel>.actions{display:flex;flex-wrap:wrap;gap:10px}
+.mb-count-confirmed{display:flex;gap:9px;align-items:center;flex-wrap:wrap;font-size:14px;color:var(--mb-cyan);margin:0 0 16px}
+.mb-count-confirmed>.icon{height:18px;width:18px}
+.mb-count-confirmed>.btn{font-size:12px;margin-left:auto;padding:7px 9px;min-height:36px}
+.mb-canvas-tools{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.mb-canvas-tools button{flex:1;min-height:44px;padding:9px 12px;border:1px solid var(--line);border-radius:9px;font-size:13px;font-weight:700;background:var(--paper);color:var(--muted)}
+.mb-canvas-tools button[aria-pressed=true]{border-color:var(--mb-cyan);color:var(--mb-cyan);background:var(--mb-cyan-soft);box-shadow:inset 0 -2px var(--mb-cyan)}
+.mb-bond-guide{stroke:var(--muted);stroke-width:1.3;stroke-dasharray:3 6;opacity:.55;pointer-events:none}
+.mb-bond-hit{stroke:transparent;stroke-width:30;stroke-linecap:round;pointer-events:stroke}
+.mb-atom-hit{fill:transparent;stroke:transparent;stroke-width:2}
+.mb-atom-target.can-edit,.mb-bond-target.can-edit{cursor:pointer;outline:0}
+.mb-atom-target.can-edit:hover .mb-atom-hit,.mb-atom-target.can-edit:focus-visible .mb-atom-hit{stroke:var(--mb-cyan);fill:var(--mb-cyan-soft);fill-opacity:.6}
+.mb-bond-target.can-edit:hover .mb-bond-hit,.mb-bond-target.can-edit:focus-visible .mb-bond-hit{stroke:var(--mb-cyan);stroke-opacity:.18}
+.mb-atom-target.can-edit:focus-visible .mb-atom-hit,.mb-bond-target.can-edit:focus-visible .mb-bond-hit{stroke-dasharray:4 3}
+.mb-bond-row>.mb-bond-stepper{display:flex;align-items:center;gap:0;border:1px solid var(--line);border-radius:9px;overflow:hidden;background:var(--soft)}
+.mb-bond-stepper .mb-order{min-width:43px;min-height:44px;border:0;border-radius:0;background:transparent}
+.mb-bond-stepper output{display:flex;align-items:center;justify-content:center;gap:6px;min-width:65px;font:650 20px var(--sans);text-align:center}
+.mb-bond-stepper output small{font:500 11px var(--mono);color:var(--muted)}
+.mb-lab input:focus-visible{outline:3px solid var(--mb-cyan);outline-offset:3px}
+@media(max-width:600px){.mb-count-panel{padding:19px}.mb-count-entry>div{flex-wrap:wrap}.mb-count-entry input{flex:1}.mb-count-entry .btn{min-height:48px}.mb-bond-stepper output{min-width:60px}.mb-canvas-tools button{font-size:12px;padding:9px}.mb-count-confirmed{font-size:13px}}
 
 .orb-lab{--orb-blue:#355dc8;--orb-blue-soft:#edf2ff;--orb-cyan:#187d93;--orb-amber:#a85f12;--orb-board:#f6f8fc;--orb-card:#fff;--orb-line:#d6deec;--orb-text:#172c49;--orb-muted:#60708a;color:var(--orb-text)}
 .orb-heading{display:flex;align-items:center;justify-content:space-between;gap:22px;margin:0 0 12px}.orb-heading h2{font-size:clamp(25px,3.5vw,36px);line-height:1.2;margin:8px 0}.orb-kicker{font-size:12px;font-weight:750;letter-spacing:.09em;text-transform:uppercase;color:var(--orb-cyan)}
@@ -253,6 +278,77 @@ body{background:var(--bg);background-image:radial-gradient(#7162a509 .8px,transp
 @media(max-width:350px){.sidebar-content .gc-module-nav{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){.topbar .top-tools .gc-settings-button{transition:none}}
 @media print{.gc-module-menu,.gc-module-topic{display:none}}
+
+.rs-lab{--rs-pink:#ca5080;--rs-blue:#496bcb;--rs-accent:#8a3f78}
+.rs-species,.rs-mode-buttons{display:grid;gap:10px;margin-bottom:18px}
+.rs-species{grid-template-columns:repeat(4,minmax(0,1fr))}
+.rs-species button,.rs-mode-buttons button{display:flex;flex-direction:column;align-items:flex-start;gap:4px;padding:13px 15px;min-height:66px;border:1px solid var(--line);border-radius:12px;background:var(--paper);text-align:left;color:var(--ink)}
+.rs-species button strong{font-size:21px;line-height:1.2}.rs-species button span,.rs-mode-buttons button span{font-size:12px;line-height:1.4;color:var(--muted)}
+.rs-mode-buttons{grid-template-columns:repeat(2,minmax(0,1fr));margin-bottom:24px}.rs-mode-buttons button strong{font-size:16px}
+.rs-species button.is-selected,.rs-mode-buttons button.is-selected{background:var(--accent-soft);border:2px solid var(--accent);padding:12px 14px;box-shadow:0 3px 0 #3a285a12}
+.rs-species button:hover,.rs-mode-buttons button:hover{border-color:var(--accent)}
+.rs-workspace{display:grid;grid-template-columns:minmax(280px,1fr) minmax(300px,1fr);gap:20px;align-items:start}
+.rs-canvas,.rs-arrow-controls,.rs-hybrid-picture,.rs-hybrid-field{border:1px solid var(--line);border-radius:15px;background:var(--paper);padding:19px}
+.rs-canvas{position:sticky;top:22px;background:linear-gradient(140deg,var(--paper),var(--soft));padding:17px 10px 12px}
+.rs-canvas-label{display:flex;gap:10px;justify-content:space-between;align-items:center;padding:0 7px;font-size:13px}.rs-canvas-label>span{font-size:11px;color:var(--muted);white-space:nowrap}
+.rs-diagram{display:block;width:100%;height:auto;overflow:visible}.rs-bond,.rs-bracket{stroke:var(--ink);stroke-width:3;fill:none;stroke-linecap:round}.rs-bracket{stroke-width:1.6}
+.rs-delocalized{stroke:var(--rs-accent);stroke-dasharray:5 7;stroke-width:3}
+.rs-atom{fill:var(--paper);stroke:var(--line);stroke-width:1.3}.rs-symbol{font:bold 24px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:var(--ink);text-anchor:middle;pointer-events:none}.rs-atom-index{font:11px sans-serif;fill:var(--muted);pointer-events:none}.rs-charge,.rs-total-charge{font:16px sans-serif;fill:var(--rs-accent);font-weight:700;pointer-events:none}
+.rs-dot{fill:var(--ink);pointer-events:none}.rs-pair-target{fill:transparent;stroke:transparent}.rs-hit{fill:transparent;stroke:transparent;cursor:pointer}.rs-atom-hit,.rs-pair{cursor:pointer}
+.rs-hit:hover,.rs-hit:focus,.rs-hit.is-selected,.rs-atom-hit:hover,.rs-atom-hit:focus{stroke:var(--rs-pink);stroke-width:2.5;fill:#ca508012;outline:none}
+.rs-pair:hover .rs-pair-target,.rs-pair:focus .rs-pair-target,.rs-pair.is-selected .rs-pair-target{fill:#ca508020;stroke:var(--rs-pink);stroke-width:2}.rs-pair:focus{outline:none}
+.rs-arrow{stroke:var(--rs-pink);fill:none;stroke-width:2.6;pointer-events:none}.rs-arrow-1{stroke:var(--rs-blue)}
+.rs-canvas-note{font-size:12px;text-align:center;margin:0;color:var(--muted)}
+.rs-arrow-controls h3{font-size:20px;margin-bottom:5px}.rs-arrow-controls>p{font-size:13px;color:var(--muted);margin-bottom:17px}.rs-step{margin-top:17px}.rs-step>strong{font-size:13px;display:block;margin-bottom:8px}
+.rs-point-buttons{display:flex;flex-wrap:wrap;gap:7px}.rs-point-choice{min-height:40px;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--paper);font-size:12px;font-weight:600}.rs-point-choice:hover{border-color:var(--accent)}.rs-point-choice.is-selected{background:var(--accent-soft);border-color:var(--accent);color:var(--accent)}
+.rs-arrow-list{margin:17px 0;padding:11px 12px;background:var(--soft);border-radius:9px;font-size:12px}.rs-arrow-list p{margin:0;color:var(--muted)}.rs-arrow-list>div{display:flex;align-items:center;justify-content:space-between;gap:8px}.rs-arrow-list button{width:34px;height:34px;flex-shrink:0;border:0;font-size:23px;border-radius:6px}.rs-arrow-list button:hover{background:var(--paper)}
+.rs-arrow-controls .btn{font-size:13px;min-height:42px}.rs-feedback{margin:18px 0;padding:15px 18px;border-radius:12px;background:var(--soft);border:1px solid var(--line)}.rs-feedback strong{font-size:15px}.rs-feedback p{margin:5px 0 0;font-size:14px}.rs-feedback.success{background:var(--good-bg);border-color:#8aa2cf}.rs-feedback.needs-work{background:var(--bad-bg);border-color:#d49e83}
+.rs-found{margin:25px 0}.rs-found h3,.rs-hybrid-intro h3{font-size:20px;margin-bottom:8px}.rs-found>p,.rs-hybrid-intro>p{font-size:13px;color:var(--muted)}
+.rs-contributors{display:flex;align-items:center;gap:5px;margin:13px 0;overflow-x:auto;padding-bottom:8px}.rs-contributors figure{margin:0;min-width:140px;flex:1;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:9px 4px 0}.rs-contributors figcaption{font-size:11px;text-align:center;color:var(--muted)}.rs-resonance-symbol{font-size:26px;color:var(--muted);flex:0 0 20px;text-align:center}.rs-contributors .rs-diagram{min-width:130px}
+.rs-hybrid-grid{display:grid;grid-template-columns:minmax(280px,1fr) minmax(250px,.9fr);gap:20px;align-items:start;margin:17px 0}.rs-hybrid-field{margin:0 0 15px;min-width:0;padding:14px}.rs-hybrid-field legend{padding:0 5px;font-size:13px;font-weight:700}.rs-hybrid-options{display:flex;flex-wrap:wrap;gap:7px}.rs-answer{min-height:42px;padding:9px 13px;border:1px solid var(--line);border-radius:8px;background:var(--paper);font-size:14px;text-align:left}.rs-answer.is-selected{background:var(--accent-soft);border:2px solid var(--accent);padding:8px 12px;color:var(--accent);opacity:1}.rs-answer:disabled{opacity:.85}.rs-hybrid-picture{text-align:center;background:var(--soft);min-height:260px}.rs-hybrid-picture h3{font-size:19px}.rs-hybrid-picture p{font-size:13px;color:var(--muted);margin-bottom:9px}.rs-hybrid-mystery{font-size:75px;line-height:1.6;color:var(--accent);font-weight:700}.rs-hybrid-picture.is-revealed{background:var(--paper)}
+.rs-bottom-actions{display:flex;justify-content:space-between;gap:10px;margin-top:22px}
+.rs-charge-table{width:100%;border-collapse:collapse;text-align:left;font-size:12px}.rs-charge-table caption{font-size:11px;font-weight:700;text-align:left;color:var(--muted);margin:9px 0}.rs-charge-table th,.rs-charge-table td{padding:7px 8px;border-top:1px solid var(--line)}.rs-charge-table th:last-child,.rs-charge-table td:last-child{text-align:right}
+:root[data-theme="dark"] .rs-lab{--rs-pink:#f190b4;--rs-blue:#99b3ff;--rs-accent:#e8a0d1}
+@media(max-width:1000px){.rs-workspace{grid-template-columns:1fr}.rs-canvas{position:static;max-width:580px;width:100%;margin-inline:auto}.rs-hybrid-grid{grid-template-columns:1fr}}
+@media(max-width:520px){.rs-species{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.rs-mode-buttons{gap:8px}.rs-mode-buttons button{padding:11px}.rs-mode-buttons button.is-selected{padding:10px}.rs-mode-buttons button strong{font-size:14px}.rs-arrow-controls{padding:15px}.rs-point-choice{min-height:44px}.rs-contributors figure{min-width:170px}.rs-hybrid-picture{padding:14px}.rs-canvas-label{align-items:flex-start}.rs-canvas-label>span{font-size:10px}.rs-bottom-actions .btn{font-size:12px}}
+
+.geo-lab{--geo-accent:#176c8e;--geo-soft:#e5f4fb;--geo-lone:#b67b1c;--geo-lone-soft:#ffe2a16b;color:var(--ink)}
+.geo-mode-buttons{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-bottom:19px}.geo-mode-buttons button{display:flex;flex-direction:column;align-items:flex-start;text-align:left;gap:6px;padding:17px 19px;border:2px solid var(--line);border-radius:14px;background:var(--paper);color:var(--ink)}.geo-mode-buttons button strong{font-size:17px}.geo-mode-buttons button span{font-size:13px;color:var(--muted)}.geo-mode-buttons button.selected{border-color:var(--geo-accent);background:var(--geo-soft);box-shadow:0 3px 0 #176c8e22}.geo-mode-buttons button.selected strong{color:var(--geo-accent)}
+.geo-family,.geo-species{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:14px}.geo-family button,.geo-species button{padding:9px 13px;min-height:42px;border:1px solid var(--line);border-radius:9px;background:var(--paper);font-size:13px;font-weight:600}.geo-family button.selected,.geo-species button.selected{background:var(--geo-soft);border-color:var(--geo-accent);color:var(--geo-accent)}.geo-species{padding:13px;border:1px solid var(--line);border-radius:12px;background:var(--soft);margin-bottom:24px}.geo-species button{font-size:16px;min-width:60px}.geo-heading h2{font-size:31px;margin:0 0 6px}.geo-heading h2 span{font:500 15px var(--sans);color:var(--muted);margin-left:9px;display:inline-block}.geo-heading>p{font-size:14px;color:var(--muted);margin-bottom:21px}.geo-workspace{display:grid;grid-template-columns:minmax(280px,1fr) minmax(0,1.15fr);gap:22px;align-items:start}.geo-stage{position:sticky;top:20px;border:1px solid var(--line);border-radius:17px;background:var(--paper);overflow:hidden;padding:16px;min-width:0}.geo-view-toggle{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}.geo-view-toggle button{min-height:42px;border:1px solid var(--line);border-radius:9px;background:var(--soft);padding:8px;font-size:13px;font-weight:650}.geo-view-toggle button.selected{background:var(--geo-soft);border-color:var(--geo-accent);color:var(--geo-accent)}.geo-model{cursor:grab;touch-action:none;user-select:none;-webkit-user-select:none;border-radius:12px;margin:9px 0}.geo-model:active{cursor:grabbing}.geo-svg{display:block;width:100%;height:auto;min-height:220px;max-height:360px;overflow:visible}.geo-bond{stroke:var(--muted);stroke-width:7;stroke-linecap:round}.geo-atom{stroke:#172a4266;stroke-width:1.4}.geo-atom-label{text-anchor:middle;fill:#14263b;font-family:var(--sans);font-weight:750;pointer-events:none}.geo-shine{fill:#ffffff7d}.geo-ground{fill:var(--line);opacity:.5}.geo-lone ellipse{fill:var(--geo-lone-soft);stroke:var(--geo-lone);stroke-width:1.5;stroke-dasharray:4 3}.geo-lone circle{fill:var(--geo-lone)}.geo-rotation{display:flex;align-items:center;gap:6px}.geo-rotation>button{min-width:36px;min-height:40px;border:1px solid var(--line);border-radius:8px;font-size:17px;background:var(--soft)}.geo-rotation>button:last-child{font-size:11px;padding:7px;max-width:55px;line-height:1.3}.geo-rotation>label,.geo-tilt>label{display:flex;align-items:center;gap:7px;font-size:11px;color:var(--muted);flex:1;min-width:0}.geo-rotation input,.geo-tilt input{width:100%;min-width:0;accent-color:var(--geo-accent);height:30px}.geo-tilt{margin:3px 42px}.geo-model-note{margin:10px 0 0;font-size:11px;text-align:center;color:var(--muted)}.geo-lone-key{display:flex;gap:8px;align-items:center;justify-content:center;font-size:11px;color:var(--muted);margin:8px 0 0}.geo-lone-key span{background:var(--geo-lone-soft);border:1px dashed var(--geo-lone);color:var(--geo-lone);font-weight:bold;line-height:1;border-radius:50%;padding:3px 9px;letter-spacing:2px}.geo-task{min-width:0}.geo-task fieldset{border:0;padding:0;margin:0 0 23px;min-width:0}.geo-task legend{font-size:16px;font-weight:750;margin-bottom:9px}.geo-task fieldset>p{font-size:12px;color:var(--muted);margin:-3px 0 9px}.geo-options{display:flex;flex-wrap:wrap;gap:7px}.geo-answer{border:1px solid var(--line);border-radius:9px;background:var(--paper);padding:9px 11px;min-height:42px;font-size:13px;line-height:1.3;flex:1 0 auto;max-width:100%}.geo-answer.selected{background:var(--geo-soft);border-color:var(--geo-accent);color:var(--geo-accent);font-weight:700;box-shadow:inset 0 -2px 0 var(--geo-accent)}.geo-answer:hover:not(:disabled),.geo-family button:hover,.geo-species button:hover{border-color:var(--geo-accent)}.geo-clue{border:1px solid var(--line);border-radius:10px;background:var(--soft);padding:11px 14px;font-size:13px}.geo-clue summary{cursor:pointer;font-weight:650}.geo-clue p{margin:12px 0 2px;line-height:1.65}.geo-solution{padding:19px;border:1px solid var(--line);border-radius:14px;background:var(--paper)}.geo-solution-pair{display:grid;gap:16px}.geo-solution-pair>div{border-left:3px solid var(--geo-accent);padding-left:13px}.geo-solution-pair>div:last-child{border-color:#b67b1c}.geo-solution-pair span{display:block;font-size:12px;color:var(--muted);margin-bottom:5px}.geo-solution-pair strong{display:block;font-size:22px;line-height:1.3;margin-bottom:6px}.geo-solution-pair small{display:block;color:var(--muted);font-size:12px;line-height:1.65}.geo-solution>p{font-size:14px;line-height:1.75;margin:20px 0 0}.geo-solution .geo-angle{font-size:13px}.geo-feedback{padding:17px 20px;border:1px solid var(--line);border-radius:12px;margin-top:20px}.geo-feedback.correct{background:var(--geo-soft);border-color:#8dbacb}.geo-feedback.retry{background:var(--bad-bg);border-color:#d8ac9c}.geo-feedback strong{font-size:17px}.geo-feedback p{margin:7px 0 0;font-size:14px;line-height:1.65}.geo-actions{display:flex;flex-wrap:wrap;gap:10px;margin:21px 0}.geo-hint{padding:16px;border-radius:11px;background:var(--geo-soft);font-size:14px;line-height:1.7;margin-bottom:19px}.geo-help{font-size:13px}.geo-help p{line-height:1.7}.geo-lab button:focus-visible,.geo-lab input:focus-visible,.geo-model:focus-visible{outline:3px solid var(--geo-accent);outline-offset:3px}
+:root[data-theme="dark"] .geo-lab{--geo-accent:#8dd4f0;--geo-soft:#253f50;--geo-lone:#f0c776;--geo-lone-soft:#d2a24d35}:root[data-theme="dark"] .geo-mode-buttons button.selected{box-shadow:none}:root[data-theme="dark"] .geo-feedback.correct{border-color:#456e81}:root[data-theme="dark"] .geo-feedback.retry{border-color:#925e53}
+@media(max-width:1120px){.geo-workspace{grid-template-columns:1fr}.geo-stage{position:static}.geo-svg{max-height:310px}.geo-stage{max-width:620px;width:100%;margin-inline:auto}.geo-task{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}.geo-task fieldset:first-child,.geo-task .geo-clue,.geo-task .geo-solution{grid-column:1/-1}.geo-task fieldset{margin-bottom:0}.geo-solution-pair{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.geo-mode-buttons{gap:8px}.geo-mode-buttons button{padding:13px 12px}.geo-mode-buttons button strong{font-size:15px}.geo-mode-buttons button span{font-size:11px;line-height:1.5}.geo-family{gap:6px}.geo-family button{padding:8px 10px;font-size:12px;flex:1}.geo-species{padding:10px;gap:6px}.geo-species button{min-width:53px;min-height:44px;padding:8px 10px;font-size:15px}.geo-heading h2{font-size:28px}.geo-heading h2 span{font-size:13px}.geo-stage{padding:12px}.geo-task{grid-template-columns:1fr;gap:21px}.geo-task fieldset{grid-column:1}.geo-options{gap:6px}.geo-answer{min-height:44px;font-size:13px}.geo-solution-pair{grid-template-columns:1fr}.geo-solution{padding:17px}.geo-view-toggle button{min-height:44px}.geo-model-note{font-size:10px}.geo-workspace{gap:20px}}
+@media print{.geo-mode-buttons,.geo-family,.geo-species,.geo-rotation,.geo-tilt,.geo-actions{display:none}.geo-stage{position:static}}
+
+.gc-module-menu .gc-menu-heading{margin:0 0 8px}
+.gc-module-menu .gc-menu-heading button{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;padding:10px 11px;border:1px solid #61557f;border-radius:10px;background:#332b50;color:#f0eaff;font-size:14px;font-weight:750;text-align:left;min-height:44px}
+.gc-module-menu .gc-menu-heading button .icon{width:17px;height:17px;flex-shrink:0}
+.gc-module-menu .gc-menu-heading button:hover{background:#493966;border-color:#a797ce}
+.gc-module-menu .gc-menu-heading button[aria-current=page]{background:#6651c7;border-color:#a996ef}
+.gc-module-nav [data-mode="resonance"]{--module-icon:#ffbdcb!important;--module-icon-bg:#592d48!important}
+.gc-module-nav [data-mode="geometry"]{--module-icon:#99e2cd!important;--module-icon-bg:#234a45!important}
+.gc-directory-heading{margin-bottom:25px}.gc-directory-heading h1{font-size:clamp(32px,4vw,44px);margin:9px 0 10px}.gc-directory-heading p{color:var(--muted);font-size:17px;margin:0}
+.gc-directory-heading .eyebrow{font-size:11px;color:var(--gc-purple)}
+.gc-category-jumps{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 32px}.gc-category-jumps a{display:inline-block;padding:9px 13px;background:var(--paper);border:1px solid var(--line);border-radius:100px;text-decoration:none;font-size:13px;font-weight:650;color:var(--ink);min-height:40px}.gc-category-jumps a:hover{background:var(--accent-soft);border-color:var(--accent)}
+.gc-game-category{scroll-margin-top:30px;margin:0 0 39px}.gc-category-heading{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:15px}.gc-category-heading h2{font:750 24px/1.2 var(--sans);letter-spacing:-.5px;margin:0}.gc-category-heading p{font-size:13px;color:var(--muted);margin:0}.gc-game-category .gc-tiles{margin:0}.gc-directory .gc-tile-art{height:125px}.gc-directory .gc-tile-copy{padding:18px 19px 16px}.gc-directory .gc-tile-copy>span{margin-top:7px}.gc-directory .gc-tile-bottom{margin-inline:19px;font-size:13px}
+.gc-resonance{--tile-tone:#ac3660;--tile-bg:#ffe5ed}.gc-geometry{--tile-tone:#197963;--tile-bg:#daf7ea}
+.gc-resonance .gc-tile-art{background-color:#ffe5ed!important}.gc-geometry .gc-tile-art{background-color:#daf7ea!important}
+:root[data-theme=dark] .gc-resonance{--tile-tone:#ffb0ce;--tile-bg:#4b2b40}:root[data-theme=dark] .gc-geometry{--tile-tone:#8ce2c6;--tile-bg:#22453d}
+:root[data-theme=dark] .gc-resonance .gc-tile-art{background-color:#4b2b40!important}:root[data-theme=dark] .gc-geometry .gc-tile-art{background-color:#22453d!important}
+.gc-topic-picker{padding:18px;background:var(--paper);border:1px solid var(--line);border-radius:16px;margin:0 0 26px;box-shadow:0 3px 0 #24233f08}
+.gc-topic-heading{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:13px}.gc-topic-heading h2{font:750 16px/1.3 var(--sans);margin:0;letter-spacing:0}.gc-topic-heading>span{font-size:12px;color:var(--muted)}
+.gc-topic-buttons{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:9px}
+.gc-topic-button{display:flex;flex-direction:column;gap:5px;padding:13px 14px;text-align:left;border:1.5px solid var(--line);border-radius:11px;background:var(--bg);color:var(--ink);min-height:83px;transition:border-color .15s ease,background .15s ease}
+.gc-topic-button:hover{background:var(--accent-soft);border-color:var(--accent)}.gc-topic-button.is-selected{background:var(--accent-soft);border-color:var(--accent);box-shadow:inset 3px 0 0 var(--accent)}
+.gc-topic-number{display:flex;justify-content:space-between;font:600 11px/1.4 var(--mono);color:var(--muted)}.gc-topic-button.is-selected .gc-topic-number{color:var(--accent)}.gc-topic-button strong{font-size:14px;line-height:1.4;font-weight:750}.gc-topic-detail{font-size:12px;line-height:1.4;color:var(--muted)}
+.gc-topic-chapters{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 13px;padding-bottom:13px;border-bottom:1px solid var(--line)}.gc-topic-chapters button{display:flex;align-items:center;gap:6px;padding:8px 10px;min-height:40px;border:1px solid var(--line);border-radius:8px;background:var(--paper);font-size:12px;font-weight:700}.gc-topic-chapters button>span{font-size:11px;font-weight:500;max-width:140px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.gc-topic-chapters button[aria-pressed=true]{background:var(--accent);border-color:var(--accent);color:var(--paper)}
+:root[data-theme=dark] .gc-topic-chapters button[aria-pressed=true]{color:#241a3d}
+.gc-current-topic{font-size:12px;color:var(--muted);margin:12px 0 0}.gc-topic-single{display:flex;align-items:baseline;flex-wrap:wrap;gap:8px 12px;margin:-7px 0 22px;padding:10px 14px;border-left:3px solid var(--accent);background:var(--soft);border-radius:0 8px 8px 0}.gc-topic-single>span,.gc-topic-single>small{font-size:12px;color:var(--muted)}.gc-topic-single>strong{font-size:14px}
+.gc-review-chapter{background:var(--paper);border:1px solid var(--line);border-radius:12px;margin-bottom:13px;padding:0 16px}.gc-review-chapter summary{padding:17px 0;cursor:pointer;font-size:16px;font-weight:700}.gc-review-chapter summary>span{font-size:12px;color:var(--accent);margin-right:10px}.gc-review-chapter .gc-topic-buttons{padding-bottom:16px}
+@media(max-width:860px){.gc-game-category{scroll-margin-top:100px}.gc-category-heading{align-items:flex-start;flex-direction:column;gap:6px}.gc-topic-heading{flex-wrap:wrap}.gc-topic-chapters button>span{display:none}.gc-module-menu .gc-menu-heading{margin-bottom:10px}}
+@media(max-width:480px){.gc-topic-picker{padding:13px}.gc-topic-buttons{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.gc-topic-button{padding:11px 10px;min-height:95px}.gc-topic-button strong{font-size:13px}.gc-topic-detail{font-size:11px}.gc-directory .gc-tiles{grid-template-columns:1fr}.gc-category-jumps{gap:6px}.gc-category-jumps a{font-size:12px;padding:8px 11px}.gc-category-heading h2{font-size:22px}}
+@media(max-width:350px){.gc-topic-buttons{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.gc-topic-button{transition:none}}
 
 /* A quiet, reachable link below the sidebar utilities. */
 .suggestion-link{display:flex;align-items:center;gap:8px;width:100%;min-height:38px;margin-top:8px;padding:8px 4px;border:0;border-top:1px solid #50486c;border-radius:0;background:transparent;color:#c9c1df;text-align:left;font-size:12px;font-weight:500;line-height:1.4}
@@ -627,8 +723,8 @@ addEventListener('pagehide',()=>{capture();save();});
 /* Chemistry activities share the existing course, sources, and progress profile. */
 const LABS = {};
 let G = null;
-const MODULE_ORDER=['ions','structure','orbitals','equations','balance','concepts'];
-const MODULE_DEFAULTS={ions:'u2',structure:'u20',orbitals:'u15',balance:'u7'};
+const MODULE_ORDER=['ions','structure','resonance','geometry','orbitals','equations','balance','concepts'];
+const MODULE_DEFAULTS={ions:'u2',structure:'u20',orbitals:'u15',balance:'u7',resonance:'u21',geometry:'u23'};
 const moduleTopics={};
 function gameDefaults(){return {direction:'front'};}
 function sanitizeGame(x){return {direction:x?.direction==='back'?'back':'front'};}
@@ -644,22 +740,24 @@ function activityArt(mode){
  balance:'<circle cx="35" cy="35" r="9"/><circle cx="54" cy="35" r="9"/><circle cx="104" cy="35" r="9"/><circle cx="123" cy="35" r="9"/><path d="M68 35h22m-6-5 6 5-6 5M28 75h104m-92-10v20m80-20v20"/><text class="small" x="62" y="95">2 : 1</text>',
  concepts:'<rect x="29" y="19" width="102" height="75" rx="10"/><path d="m42 42 5 5 9-11M65 42h45m-68 25 5 5 9-11M65 67h29"/>',
  problems:'<path d="M42 17h71v77H42zM54 36h45M54 53h23M54 70h12m25-7v14m-7-7h14"/><text class="small" x="19" y="57">n</text>',
+ resonance:'<text x="24" y="62">O</text><text x="72" y="44">C</text><text x="122" y="62">O</text><path d="M44 52 66 39m-19 19 21-14M94 40l23 12M31 30Q55 5 79 25m-6-1 6 1-2-6M125 75Q97 103 79 78m5 0-5 0 0 6"/><circle class="dot" cx="126" cy="33" r="2"/><circle class="dot" cx="133" cy="33" r="2"/>',
+ geometry:'<path d="M80 54 80 20M80 54 40 80M80 54 123 80M80 54 93 90"/><path d="m76 54 13 36 8-2-13-34" fill="currentColor"/><circle cx="80" cy="51" r="13"/><circle cx="80" cy="17" r="8"/><circle cx="34" cy="85" r="8"/><circle cx="129" cy="85" r="8"/><circle cx="95" cy="94" r="8"/>',
  cards:'<rect x="35" y="15" width="75" height="72" rx="8"/><rect x="49" y="27" width="75" height="72" rx="8"/><text x="66" y="68">Ca</text>'};
  return `<svg class="gc-art" viewBox="0 0 160 112" aria-hidden="true">${drawings[mode]||drawings.concepts}</svg>`;
 }
-function availableLabs(u){return ['ions','structure','orbitals','equations','balance','concepts'].filter(k=>LABS[k]?.units.includes(u.key));}
-const GAME_COPY={ions:'Build atoms and neutral formulas.',structure:'Set bonds. Place electrons.',orbitals:'Fill orbitals and predict bonding.',equations:'Choose it. Rearrange it. Solve it.',balance:'Make every atom count.',concepts:'Five quick chemistry decisions.'};
+function availableLabs(u){return ['ions','structure','resonance','geometry','orbitals','equations','balance','concepts'].filter(k=>LABS[k]?.units.includes(u.key));}
+const GAME_COPY={ions:'Build atoms and neutral formulas.',structure:'Set bonds. Place electrons.',orbitals:'Fill orbitals and predict bonding.',equations:'Choose it. Rearrange it. Solve it.',balance:'Make every atom count.',concepts:'Five quick chemistry decisions.',resonance:'Move electrons. Build the hybrid.',geometry:'Rotate molecules. Name both geometries.'};
 function labTile(mode,u){const lab=LABS[mode];return `<button class="gc-tile gc-${mode}" data-game="launch" data-mode="${mode}" data-unit="${u.key}"><span class="gc-tile-art">${activityArt(mode)}</span><span class="gc-tile-copy"><strong>${e(lab.title)}</strong><span>${e(GAME_COPY[mode])}</span></span><span class="gc-tile-bottom">Play ${icon('arrow')}</span></button>`;}
 function sectionActivities(u){return `<div class="gc-section-heading"><h2>Choose a game</h2></div><div class="gc-tiles">${availableLabs(u).map(k=>labTile(k,u)).join('')}<button class="gc-tile gc-problems" data-game="problems" data-unit="${u.key}"><span class="gc-tile-art">${activityArt('problems')}</span><span class="gc-tile-copy"><strong>Problem trail</strong><span>Five problems. Work it out.</span></span><span class="gc-tile-bottom">Play ${icon('arrow')}</span></button><button class="gc-tile gc-cards" data-action="cards-unit" data-unit="${u.key}"><span class="gc-tile-art">${activityArt('cards')}</span><span class="gc-tile-copy"><strong>Flashcards</strong><span>Terms and equations. Flip either way.</span></span><span class="gc-tile-bottom">Flip ${icon('arrow')}</span></button></div>`;}
-function launchLab(mode,unit,entry='section'){const lab=LABS[mode];if(!lab||!lab.units.includes(unit))return;G={mode,unit,entry,state:lab.create(unit),records:{}};moduleTopics[mode]=unit;P.lastUnit=unit;save();go('lab',{unit,chapter:byUnit(unit).ch});}
+function launchLab(mode,unit,entry='section'){const lab=LABS[mode];if(!lab||!lab.units.includes(unit))return;G={mode,unit,entry,state:lab.create(unit),records:{}};moduleTopics[mode]=unit;topicChapters[mode]=byUnit(unit).ch;P.lastUnit=unit;save();go('lab',{unit,chapter:byUnit(unit).ch});}
 function openModule(mode){
  const lab=LABS[mode];if(!lab||!MODULE_ORDER.includes(mode))return;
  if(G?.mode===mode){G.entry='module';go('lab',{unit:G.unit,chapter:byUnit(G.unit).ch});return;}
  const preferred=moduleTopics[mode]||MODULE_DEFAULTS[mode];
  launchLab(mode,lab.units.includes(preferred)?preferred:U.find(u=>lab.units.includes(u.key)).key,'module');
 }
-function moduleTopicPicker(){const lab=LABS[G.mode];return `<div class="gc-module-topic"><label for="module-topic">Topic</label><select id="module-topic" data-game-topic>${U.filter(u=>lab.units.includes(u.key)).map(u=>`<option value="${u.key}" ${u.key===G.unit?'selected':''}>§${e(sectionLabel(u))} · ${e(u.t)}</option>`).join('')}</select></div>`;}
-function labView(){if(!G)return '<div class="empty">Choose a game.</div>';const u=byUnit(G.unit),lab=LABS[G.mode],direct=G.entry==='module';return `<div class="gc-lab" data-mode="${G.mode}" data-chapter="${u.ch}"><div class="gc-lab-toolbar">${direct?`<button class="btn text" data-action="home">${icon('back')} Chapters</button>`:`<button class="btn text" data-action="unit" data-unit="${u.key}">${icon('back')} Games</button>`}<span class="gc-label">§${e(sectionLabel(u))} · ${e(u.label)}</span></div><div class="gc-lab-title"><h1>${e(lab.title)}</h1></div>${direct?moduleTopicPicker():''}${lab.render(G.state)}<div class="gc-lab-source">${sourceHTML(u)}</div></div>`;}
+function moduleTopicPicker(){return ''; } // Replaced by the visible topic controls in games-hub.js.
+function labView(){if(!G)return '<div class="empty">Choose a game.</div>';const u=byUnit(G.unit),lab=LABS[G.mode],direct=G.entry==='module';return `<div class="gc-lab" data-mode="${G.mode}" data-chapter="${u.ch}"><div class="gc-lab-toolbar">${direct?`<button class="btn text" data-action="nav" data-view="games">${icon('back')} All games</button>`:`<button class="btn text" data-action="unit" data-unit="${u.key}">${icon('back')} Games</button>`}<span class="gc-label">§${e(sectionLabel(u))} · ${e(u.label)}</span></div><div class="gc-lab-title"><h1>${e(lab.title)}</h1></div>${moduleTopicPicker()}${lab.render(G.state)}<div class="gc-lab-source">${sourceHTML(u)}</div></div>`;}
 LABS.concepts={title:'Concept challenge',description:'Five quick chemistry decisions.',icon:'atom',units:U.filter(u=>Q.some(q=>q.unit===u.key&&q.type==='concept'&&!q.category)).map(u=>u.key),
  create(unit){const items=shuffle(Q.filter(q=>q.unit===unit&&q.type==='concept'&&(!q.category||q.category==='concept'))).slice(0,5).map(q=>({...copy(q),options:shuffle(q.options)}));return {items,index:0,correct:0,chain:0,best:0,answers:[],selected:null,graded:false,hint:false,done:false};},
  render(s){
@@ -685,7 +783,7 @@ progress=function(){return `<div class="page-head"><h1>Settings</h1></div><secti
 const originalSession=session;session=function(){return originalSession().replace(/<div class="progress-track">.*?<\/div>/g,'');};
 const originalResults=results;results=function(){return originalResults().replace(/<div class="score-ring".*?<\/div>/g,'');};
 const coreCards=cards;cards=function(){if(!F)return coreCards();const c=F.items[F.index];if(!c)return `<div class="panel gc-finish"><div class="gc-medal" aria-hidden="true">✦</div><h2>${F.items.length?'Deck complete!':'No cards due'}</h2><button class="btn primary" data-action="home">More games</button></div>`;const direction=gameState().direction,front=direction==='back'?c.back:c.front,back=direction==='back'?c.front:c.back,u=byUnit(c.unit);return `<div class="session gc-deck"><div class="session-toolbar"><button class="btn text" data-action="unit" data-unit="${u.key}">${icon('back')} Back to section</button><span>Card ${F.index+1} / ${F.items.length}</span></div><div class="gc-direction" aria-label="Recall direction"><span>Start with</span><button class="choice" data-game="direction" data-direction="front" aria-pressed="${direction==='front'}">Term first</button><button class="choice" data-game="direction" data-direction="back" aria-pressed="${direction==='back'}">Definition first</button></div><div class="card-meta"><span>§${e(sectionLabel(u))} · ${c.kind}</span></div><button class="flashcard ${F.revealed?'revealed':''}" data-action="flip"><span class="side-label">${F.revealed?'Answer':'Recall'}</span><span>${science(F.revealed?back:front)}</span><small class="gc-flip-hint">${F.revealed?'↻ See prompt':'↻ Flip card'}</small></button>${F.revealed?`<div class="card-controls"><button class="btn" data-action="rate" data-rating="again">Again<small>10 minutes</small></button><button class="btn" data-action="rate" data-rating="hard">Hard<small>Tomorrow</small></button><button class="btn primary" data-action="rate" data-rating="good">Got it<small>${cardInterval(c)} days</small></button></div>`:''}<div class="gc-lab-source">${sourceHTML(u)}</div></div>`;};
-const coreDraw=draw;draw=function(){if(V.view==='lab'){header();$('#main').innerHTML=labView();$('#footer').innerHTML=footer();document.title=LABS[G.mode].title+' · Gen Chem Atlas';}else coreDraw();};
+const coreDraw=draw;draw=function(){if(V.view==='lab'){header();$('#main').innerHTML=labView();$('#footer').innerHTML=footer();document.title=LABS[G.mode].title+' · Gen Chem Atlas';}else if(V.view==='games'||V.view==='game-topics'){header();$('#main').innerHTML=V.view==='games'?gamesHub():reviewTopics();$('#footer').innerHTML=footer();document.title='Chemistry games · Gen Chem Atlas';}else coreDraw();};
 function settingsIcon(){return '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 3-.8 2.6-2.5 1-2.4-.6-1.5 2.6 1.7 2v2.8l-1.7 2L3.3 18l2.4-.6 2.5 1L9 21h3l.8-2.6 2.5-1 2.4.6 1.5-2.6-1.7-2v-2.8l1.7-2L17.7 6l-2.4.6-2.5-1L12 3Z" transform="translate(1.5 0)"/><circle cx="12" cy="12" r="3"/></svg>';}
 header=function(){
  const nav=[['home','mix','Play'],['exams','pencil','Practice tests'],['reference','table','Toolbox'],['map','map','Sources']];
@@ -693,7 +791,7 @@ header=function(){
  $('#header').innerHTML=`<div class="top-inner"><button class="brand" data-action="home" aria-label="Gen Chem Atlas home"><span class="brandmark" aria-hidden="true">${BRAND_MARK}</span><span class="brand-copy"><span class="brand-title">Gen Chem Atlas</span><span class="brand-sub">Chemistry 2e</span></span></button><button class="mobile-menu" data-action="menu-toggle" aria-expanded="${V.menu}" aria-controls="sidebar-navigation">${icon(V.menu?'close':'menu')}<span>Menu</span></button><div class="sidebar-content ${V.menu?'is-open':''}" id="sidebar-navigation">
  <nav class="nav" aria-label="Main navigation">${nav.map(([view,svg,label])=>`<button data-action="nav" data-view="${view}" class="${view===current?'active':''}" ${view===current?'aria-current="page"':''}>${icon(svg)}<span>${label}</span></button>`).join('')}</nav>
  <button class="build-button ${V.view==='setup'?'active':''}" data-action="build-set" ${V.view==='setup'?'aria-current="page"':''}>${icon('plus')}<span>Build practice set</span></button>
- <section class="gc-module-menu"><h2 id="module-menu-title">Chemistry games</h2><nav class="nav gc-module-nav" aria-labelledby="module-menu-title">${MODULE_ORDER.filter(mode=>LABS[mode]).map(mode=>`<button data-game="open-module" data-mode="${mode}" class="${V.view==='lab'&&G?.mode===mode?'active':''}" ${V.view==='lab'&&G?.mode===mode?'aria-current="page"':''}><span class="gc-module-icon">${icon(LABS[mode].icon)}</span><span>${e(LABS[mode].title)}</span></button>`).join('')}</nav></section>
+ <section class="gc-module-menu"><h2 id="module-menu-title" class="gc-menu-heading"><button data-action="nav" data-view="games" ${['games','game-topics'].includes(V.view)?'aria-current="page"':''}><span>Chemistry games</span>${icon('arrow')}</button></h2><nav class="nav gc-module-nav" aria-labelledby="module-menu-title">${MODULE_ORDER.filter(mode=>LABS[mode]).map(mode=>`<button data-game="open-module" data-mode="${mode}" class="${V.view==='lab'&&G?.mode===mode?'active':''}" ${V.view==='lab'&&G?.mode===mode?'aria-current="page"':''}><span class="gc-module-icon">${icon(LABS[mode].icon)}</span><span>${e(LABS[mode].title)}</span></button>`).join('')}</nav></section>
  <div class="sidebar-bottom"><div class="top-tools"><button class="btn text" data-action="periodic">${icon('table')} Periodic table</button><button class="icon-btn gc-settings-button ${current==='progress'?'active':''}" data-action="nav" data-view="progress" aria-label="Settings" title="Settings" ${current==='progress'?'aria-current="page"':''}>${settingsIcon()}</button></div>${suggestionButton()}</div></div></div>`;
 };
 function restoreLabFocus(dataset,start=null){
@@ -711,7 +809,6 @@ document.addEventListener('click',ev=>{
 });
 function labInput(ev){const el=ev.target.closest('[data-lab-input]');if(el&&V.view==='lab'&&G&&LABS[G.mode].change){const dataset={...el.dataset},start=el.selectionStart;const redraw=LABS[G.mode].change(G.state,el);if(redraw!==false){draw();restoreLabFocus(dataset,start);}}}
 document.addEventListener('input',labInput);document.addEventListener('change',labInput);
-document.addEventListener('change',ev=>{const el=ev.target.closest('[data-game-topic]');if(!el||V.view!=='lab'||G?.entry!=='module'||!LABS[G.mode].units.includes(el.value)||el.value===G.unit)return;launchLab(G.mode,el.value,'module');$('#module-topic').focus({preventScroll:true});});
 document.addEventListener('keydown',ev=>{if(ev.target.matches('input,textarea,select')||$('#dialog').open)return;if(V.view==='lab'&&G?.mode==='concepts'&&!G.state.graded&&/^[1-4]$/.test(ev.key)){const el=$(`[data-lab-action="cc-pick"][data-index="${+ev.key-1}"]`);if(el){ev.preventDefault();el.click();}}});
 
 /* Fixed-scaffold Lewis builder. All diagrams and practice prompts are original. */
@@ -741,7 +838,7 @@ function mbPool(unit){
  if(['u23','u24'].includes(unit))pool=pool.filter(m=>m.center!==null);
  return pool;
 }
-function mbNew(unit,id){const pool=mbPool(unit),m=pool.find(x=>x.id===id)||pool[0];return {unit,id:m.id,bonds:m.edges.map(()=>1),pairs:m.atoms.map(()=>0),shape:'',hybrid:'',sigma:'',pi:'',feedback:null,complete:false,lewisSolved:false,assisted:false,checks:0,recordedWrong:false,recordedFinal:false,hint:false};}
+function mbNew(unit,id){const pool=mbPool(unit),m=pool.find(x=>x.id===id)||pool[0];return {unit,id:m.id,bonds:m.edges.map(()=>0),pairs:m.atoms.map(()=>0),countInput:'',countAccepted:false,tool:'add',shape:'',hybrid:'',sigma:'',pi:'',feedback:null,complete:false,lewisSolved:false,assisted:false,checks:0,recordedWrong:false,recordedFinal:false,hint:false};}
 function mbData(s){return MB_MOLECULES.find(m=>m.id===s.id);}
 function mbAccounting(m,bonds,pairs){
  const around=m.atoms.map((_,i)=>2*pairs[i]+2*m.edges.reduce((n,ed,j)=>n+(ed.includes(i)?bonds[j]:0),0));
@@ -764,41 +861,62 @@ function mbValidate(m,bonds,pairs){
 function mbCharge(n){return n===0?'0':n>0?'+'+n:'−'+Math.abs(n);}
 function mbIonCharge(n){return !n?'':(Math.abs(n)===1?'':Math.abs(n))+(n>0?'+':'−');}
 function mbDiagram(s){
- const m=mbData(s),c=mbAccounting(m,s.bonds,s.pairs);
- const lines=m.edges.map(([a,b],j)=>{const [x1,y1]=m.xy[a],[x2,y2]=m.xy[b],dx=x2-x1,dy=y2-y1,len=Math.hypot(dx,dy),ux=dx/len,uy=dy/len;return Array.from({length:s.bonds[j]},(_,k)=>{const off=(k-(s.bonds[j]-1)/2)*7;return `<line x1="${x1+ux*24-uy*off}" y1="${y1+uy*24+ux*off}" x2="${x2-ux*24-uy*off}" y2="${y2-uy*24+ux*off}" class="mb-bond"/>`;}).join('');}).join('');
+ const m=mbData(s),editable=s.countAccepted&&!s.complete,remove=s.tool==='remove';
+ const lines=m.edges.map(([a,b],j)=>{
+  const [x1,y1]=m.xy[a],[x2,y2]=m.xy[b],dx=x2-x1,dy=y2-y1,len=Math.hypot(dx,dy),ux=dx/len,uy=dy/len;
+  const segment=Array.from({length:s.bonds[j]},(_,k)=>{const off=(k-(s.bonds[j]-1)/2)*7;return `<line x1="${x1+ux*24-uy*off}" y1="${y1+uy*24+ux*off}" x2="${x2-ux*24-uy*off}" y2="${y2-uy*24+ux*off}" class="mb-bond"/>`;}).join('');
+  const guide=s.bonds[j]===0?`<line x1="${x1+ux*34}" y1="${y1+uy*34}" x2="${x2-ux*34}" y2="${y2-uy*34}" class="mb-bond-guide"/>`:'';
+  const canEdit=editable&&(remove?s.bonds[j]>0:s.bonds[j]<3),label=`${remove?'Remove':'Add'} one bonding pair between ${mbAtomName(m,a)} and ${mbAtomName(m,b)}; bond order ${s.bonds[j]}`;
+  return `<g class="mb-bond-target ${canEdit?'can-edit':''}" ${canEdit?`role="button" tabindex="0" data-lab-action="mb-canvas-bond" data-index="${j}" aria-label="${e(label)}"`:''}>${guide}${segment}${canEdit?`<line class="mb-bond-hit" x1="${x1+ux*35}" y1="${y1+uy*35}" x2="${x2-ux*35}" y2="${y2-uy*35}"/>`:''}</g>`;
+ }).join('');
  const atoms=m.atoms.map((a,i)=>{
   const [x,y]=m.xy[i],bDirections=m.edges.flatMap(([aa,bb])=>aa===i?[Math.atan2(m.xy[bb][1]-y,m.xy[bb][0]-x)]:bb===i?[Math.atan2(m.xy[aa][1]-y,m.xy[aa][0]-x)]:[]);
   const dist=(p,q)=>Math.abs(Math.atan2(Math.sin(p-q),Math.cos(p-q)));
   const slots=[-Math.PI/2,0,Math.PI/2,Math.PI].sort((p,q)=>Math.min(...bDirections.map(b=>dist(q,b)))-Math.min(...bDirections.map(b=>dist(p,b))));
   const dots=slots.slice(0,s.pairs[i]).map(angle=>{const cx=x+27*Math.cos(angle),cy=y+27*Math.sin(angle),dx=3.8*Math.sin(angle),dy=-3.8*Math.cos(angle);return `<circle cx="${cx+dx}" cy="${cy+dy}" r="2.5" class="mb-electron"/><circle cx="${cx-dx}" cy="${cy-dy}" r="2.5" class="mb-electron"/>`;}).join('');
-  return `<g><circle cx="${x}" cy="${y}" r="19" class="mb-atom-bg mb-el-${a}"/><text x="${x}" y="${y+8}" class="mb-symbol">${a}</text>${dots}</g>`;
+  const canEdit=editable&&(remove?s.pairs[i]>0:s.pairs[i]<4),label=`${remove?'Remove':'Add'} one lone pair on ${mbAtomName(m,i)}; ${s.pairs[i]} lone pairs`;
+  return `<g class="mb-atom-target ${canEdit?'can-edit':''}" ${canEdit?`role="button" tabindex="0" data-lab-action="mb-canvas-pair" data-index="${i}" aria-label="${e(label)}"`:''}><circle class="mb-atom-hit" cx="${x}" cy="${y}" r="33"/><circle cx="${x}" cy="${y}" r="19" class="mb-atom-bg mb-el-${a}"/><text x="${x}" y="${y+8}" class="mb-symbol">${a}</text>${dots}</g>`;
  }).join('');
  const bracket=m.charge?`<path d="M26 22H17V242H26M374 22H383V242H374" class="mb-bracket"/><text x="387" y="18" class="mb-ion">${mbIonCharge(m.charge)}</text>`:'';
- return `<svg viewBox="0 0 420 270" role="img" aria-label="Your editable Lewis structure for ${e(m.formula)}. ${s.bonds.map((n,j)=>mbAtomName(m,m.edges[j][0])+' to '+mbAtomName(m,m.edges[j][1])+': bond order '+n).join('; ')}. Lone pairs: ${s.pairs.map((n,i)=>mbAtomName(m,i)+' '+n).join(', ')}.">${bracket}${lines}${atoms}</svg>`;
+ return `<svg viewBox="0 0 420 270" role="group" aria-label="Lewis structure for ${e(m.formula)}. ${s.bonds.map((n,j)=>mbAtomName(m,m.edges[j][0])+' to '+mbAtomName(m,m.edges[j][1])+': bond order '+n).join('; ')}. Lone pairs: ${s.pairs.map((n,i)=>mbAtomName(m,i)+' '+n).join(', ')}.">${bracket}${lines}${atoms}</svg>`;
 }
 function mbSelect(label,field,options,value,disabled=false){return `<label class="mb-field"><span>${label}</span><select data-lab-input="mb-${field}" ${disabled?'disabled':''}><option value="">Choose…</option>${options.map(x=>`<option value="${e(x)}" ${String(value)===String(x)?'selected':''}>${e(x)}</option>`).join('')}</select></label>`;}
 function mbTheory(s){
  const m=mbData(s);if(!['u23','u24'].includes(s.unit))return '';
  const label=mbAtomName(m,m.center),locked=!s.lewisSolved&&!s.complete;
- return `<section class="mb-theory ${locked?'is-locked':''}"><div class="mb-step-heading"><span>02</span><div><h3>From structure to shape</h3><p>${locked?'Build the structure first.':`Predict the shape around ${e(label)}.`}</p></div></div><div class="mb-theory-fields">${mbSelect('Molecular geometry around '+e(label),'shape',['Linear','Bent','Trigonal planar','Trigonal pyramidal','Tetrahedral'],s.shape,locked||s.complete)}${s.unit==='u24'?mbSelect('Hybridization of '+e(label),'hybrid',['sp','sp²','sp³'],s.hybrid,locked||s.complete)+mbSelect('σ bonds in the whole species','sigma',[1,2,3,4,5,6],s.sigma,locked||s.complete)+mbSelect('π bonds in this Lewis contributor','pi',[0,1,2,3],s.pi,locked||s.complete):''}</div></section>`;
+ return `<section class="mb-theory ${locked?'is-locked':''}"><div class="mb-step-heading"><span>03</span><div><h3>From structure to shape</h3><p>${locked?'Build the structure first.':`Predict the shape around ${e(label)}.`}</p></div></div><div class="mb-theory-fields">${mbSelect('Molecular geometry around '+e(label),'shape',['Linear','Bent','Trigonal planar','Trigonal pyramidal','Tetrahedral'],s.shape,locked||s.complete)}${s.unit==='u24'?mbSelect('Hybridization of '+e(label),'hybrid',['sp','sp²','sp³'],s.hybrid,locked||s.complete)+mbSelect('σ bonds in the whole species','sigma',[1,2,3,4,5,6],s.sigma,locked||s.complete)+mbSelect('π bonds in this Lewis contributor','pi',[0,1,2,3],s.pi,locked||s.complete):''}</div></section>`;
 }
 function mbFeedback(s){
  const f=s.feedback;if(!f)return '';
  return `<div class="mb-feedback ${f.kind}" role="status"><strong>${e(f.title)}</strong>${f.messages.map(t=>`<p>${science(t)}</p>`).join('')}</div>`;
 }
+function mbCountHint(m){
+ const tally={};m.atoms.forEach(a=>tally[a]=(tally[a]||0)+1);
+ return Object.entries(tally).map(([atom,n])=>`${n} × ${MB_VALENCE[atom]} (${atom})`).join(' + ')+(m.charge<0?` + ${Math.abs(m.charge)} for the negative charge`:m.charge>0?` − ${m.charge} for the positive charge`:'');
+}
+function mbCountPanel(s,m){return `<section class="mb-count-panel"><div class="mb-step-heading"><span>01</span><div><h3>Count the valence electrons</h3><p>Add each atom’s valence electrons, then account for the ion’s charge.</p></div></div><div class="mb-count-entry"><label for="mb-electron-count">Total valence electrons in ${science(m.formula)}</label><div><input id="mb-electron-count" data-lab-input="mb-count" inputmode="numeric" type="text" maxlength="3" autocomplete="off" value="${e(s.countInput)}" aria-describedby="mb-count-help"><button class="btn primary" data-lab-action="mb-count-check">Check count ${icon('check')}</button></div><small id="mb-count-help">Count electrons, not electron pairs.</small></div>${s.hint?`<div class="mb-hint"><strong>Set up the count</strong><p>${e(mbCountHint(m))}</p></div>`:''}${mbFeedback(s)}<div class="actions"><button class="btn text" data-lab-action="mb-hint">Count hint</button><button class="btn text" data-lab-action="mb-count-solution">Show the count</button></div></section>`;}
 function mbRender(s){
  const m=mbData(s),pool=mbPool(s.unit),c=mbAccounting(m,s.bonds,s.pairs),remaining=c.target-c.used;
- return `<div class="mb-lab"><div class="mb-toolbar"><label class="mb-challenge-label">Challenge<select data-lab-input="mb-challenge">${pool.map(x=>`<option value="${x.id}" ${s.id===x.id?'selected':''}>${e(x.formula)} · ${e(x.name)}</option>`).join('')}</select></label></div><div class="mb-brief"><div><h2>${science(m.formula)} <span>${e(m.name)}</span></h2><p>Set the bonds and lone pairs.${m.resonance?' Equivalent resonance forms count.':''}</p>${m.exception?`<p class="mb-exception">Octet exception: ${e(m.exception)}</p>`:''}</div><div class="mb-budget ${remaining===0?'is-balanced':''}"><b>${c.used}<small> / ${c.target}</small></b><span>valence electrons placed</span><strong>${remaining===0?'Budget balanced':remaining>0?remaining+' left to place':Math.abs(remaining)+' too many'}</strong></div></div><div class="mb-workspace"><div class="mb-canvas ${s.complete?'is-complete':''}"><div class="mb-canvas-label"><span>${s.complete?(s.assisted?'Guided solution':'Structure solved'):'Your structure'}</span><span>2D Lewis sketch</span></div>${mbDiagram(s)}<p>Fixed atoms · 2D connectivity sketch</p></div><div class="mb-controls"><div class="mb-step-heading"><span>01</span><div><h3>Place the electrons</h3><p>Two electrons per bond line or lone pair.</p></div></div><div class="mb-control-group"><h4>Bond orders</h4><div class="mb-bond-controls">${m.edges.map(([a,b],j)=>`<div class="mb-bond-row"><span>${e(mbAtomName(m,a)+' – '+mbAtomName(m,b))}</span><div role="group" aria-label="Bond order between ${e(mbAtomName(m,a)+' and '+mbAtomName(m,b))}">${[1,2,3].map(n=>`<button class="mb-order ${s.bonds[j]===n?'is-selected':''}" data-lab-action="mb-bond" data-index="${j}" data-value="${n}" aria-pressed="${s.bonds[j]===n}" aria-label="${['','Single','Double','Triple'][n]} bond" ${s.complete?'disabled':''}>${['','—','=','≡'][n]}<small>${n}</small></button>`).join('')}</div></div>`).join('')}</div></div><div class="mb-control-group"><h4>Lone pairs & formal charge</h4><div class="mb-pair-header"><span>Atom</span><span>Lone pairs</span><span>FC</span></div>${m.atoms.map((a,i)=>`<div class="mb-pair-row"><span class="mb-atom-label">${e(mbAtomName(m,i))}<small>${a==='H'?'duet':'shell'}: ${c.around[i]} e⁻</small></span><div class="mb-stepper"><button data-lab-action="mb-pair" data-index="${i}" data-delta="-1" aria-label="Remove one lone pair from ${e(mbAtomName(m,i))}" ${s.complete||s.pairs[i]===0?'disabled':''}>−</button><output aria-label="Lone pairs on ${e(mbAtomName(m,i))}">${s.pairs[i]}</output><button data-lab-action="mb-pair" data-index="${i}" data-delta="1" aria-label="Add one lone pair to ${e(mbAtomName(m,i))}" ${s.complete||s.pairs[i]>=4?'disabled':''}>+</button></div><span class="mb-fc ${c.charges[i]?'is-charged':''}" title="Formal charge: valence electrons minus nonbonding electrons minus total bond order">${mbCharge(c.charges[i])}</span></div>`).join('')}<p class="mb-fc-note">Total charge: <strong>${mbCharge(c.charges.reduce((a,b)=>a+b,0))}</strong> · target <strong>${mbCharge(m.charge)}</strong></p><details class="play-help"><summary>Formal charge rule</summary><p>FC = valence e⁻ − 2(lone pairs) − bond-order sum.</p></details></div></div></div>${mbTheory(s)}${s.hint?`<div class="mb-hint"><strong>Build in this order</strong><p>Count ${c.target} valence electrons${m.charge<0?' (including '+Math.abs(m.charge)+' added for the negative charge)':m.charge>0?' (after removing '+m.charge+' for the positive charge)':''}. Keep H at two electrons. Fill terminal shells with lone pairs, then use multiple bonds if a central atom is short of an octet. Recount the total before checking.</p></div>`:''}${mbFeedback(s)}<div class="mb-actions"><div class="actions">${s.complete?`<button class="btn primary" data-lab-action="mb-next">Next structure ${icon('arrow')}</button><button class="btn" data-lab-action="mb-reset">Build again</button>`:`<button class="btn primary" data-lab-action="mb-check">${s.lewisSolved&&['u23','u24'].includes(s.unit)?'Check predictions':'Check structure'} ${icon('check')}</button><button class="btn" data-lab-action="mb-hint">Hint</button><button class="btn text" data-lab-action="mb-solution">Show solution</button>`}</div>${!s.complete?'<button class="btn text" data-lab-action="mb-reset">Reset</button>':''}</div></div>`;
+ const title=`<div class="mb-toolbar"><label class="mb-challenge-label">Molecule<select data-lab-input="mb-challenge">${pool.map(x=>`<option value="${x.id}" ${s.id===x.id?'selected':''}>${e(x.formula)} · ${e(x.name)}</option>`).join('')}</select></label></div><div class="mb-brief"><div><h2>${science(m.formula)} <span>${e(m.name)}</span></h2><p>${s.countAccepted?'Place every bond and lone pair.':'Count first. Then build from empty atoms.'}${m.resonance?' Equivalent resonance forms count.':''}</p>${m.exception?`<p class="mb-exception">Octet exception: ${e(m.exception)}</p>`:''}</div>${s.countAccepted?`<div class="mb-budget ${remaining===0?'is-balanced':''}"><b>${c.used}<small> / ${c.target}</small></b><span>valence electrons placed</span><strong>${remaining===0?'Budget balanced':remaining>0?remaining+' left to place':Math.abs(remaining)+' too many'}</strong></div>`:''}</div>`;
+ if(!s.countAccepted)return `<div class="mb-lab">${title}${mbCountPanel(s,m)}</div>`;
+ return `<div class="mb-lab">${title}<div class="mb-count-confirmed">${icon('check')} ${c.target} valence electrons <button class="btn text" data-lab-action="mb-reset">Start over</button></div><div class="mb-workspace"><div class="mb-canvas ${s.complete?'is-complete':''}"><div class="mb-canvas-label"><span>${s.complete?(s.assisted?'Guided solution':'Structure solved'):'Your structure'}</span><span>2D Lewis sketch</span></div>${!s.complete?`<div class="mb-canvas-tools" role="group" aria-label="Electron placement tool"><button data-lab-action="mb-tool" data-value="add" aria-pressed="${s.tool==='add'}">+ Add pair</button><button data-lab-action="mb-tool" data-value="remove" aria-pressed="${s.tool==='remove'}">− Remove pair</button></div>`:''}${mbDiagram(s)}<p>${s.complete?'Atom positions are fixed; this is a connectivity sketch.':'Tap between atoms for a bond; tap an atom for a lone pair. Dashed guides are empty bond slots.'}</p></div><div class="mb-controls"><div class="mb-step-heading"><span>02</span><div><h3>Place the electrons</h3><p>One bond line or lone pair uses two electrons.</p></div></div><div class="mb-control-group"><h4>Bonds</h4><div class="mb-bond-controls">${m.edges.map(([a,b],j)=>`<div class="mb-bond-row"><span>${e(mbAtomName(m,a)+' – '+mbAtomName(m,b))}</span><div class="mb-bond-stepper" role="group" aria-label="Bond between ${e(mbAtomName(m,a)+' and '+mbAtomName(m,b))}"><button class="mb-order" data-lab-action="mb-bond-step" data-index="${j}" data-delta="-1" aria-label="Remove one bonding pair between ${e(mbAtomName(m,a)+' and '+mbAtomName(m,b))}" ${s.complete||s.bonds[j]===0?'disabled':''}>−</button><output aria-label="Bond order ${s.bonds[j]}">${['None','—','=','≡'][s.bonds[j]]}<small>${s.bonds[j]}</small></output><button class="mb-order" data-lab-action="mb-bond-step" data-index="${j}" data-delta="1" aria-label="Add one bonding pair between ${e(mbAtomName(m,a)+' and '+mbAtomName(m,b))}" ${s.complete||s.bonds[j]>=3?'disabled':''}>+</button></div></div>`).join('')}</div></div><div class="mb-control-group"><h4>Lone pairs & formal charge</h4><div class="mb-pair-header"><span>Atom</span><span>Lone pairs</span><span>FC</span></div>${m.atoms.map((a,i)=>`<div class="mb-pair-row"><span class="mb-atom-label">${e(mbAtomName(m,i))}<small>${a==='H'?'duet':'shell'}: ${c.around[i]} e⁻</small></span><div class="mb-stepper"><button data-lab-action="mb-pair" data-index="${i}" data-delta="-1" aria-label="Remove one lone pair from ${e(mbAtomName(m,i))}" ${s.complete||s.pairs[i]===0?'disabled':''}>−</button><output aria-label="Lone pairs on ${e(mbAtomName(m,i))}">${s.pairs[i]}</output><button data-lab-action="mb-pair" data-index="${i}" data-delta="1" aria-label="Add one lone pair to ${e(mbAtomName(m,i))}" ${s.complete||s.pairs[i]>=4?'disabled':''}>+</button></div><span class="mb-fc ${c.charges[i]?'is-charged':''}" title="Formal charge: valence electrons minus nonbonding electrons minus total bond order">${mbCharge(c.charges[i])}</span></div>`).join('')}<p class="mb-fc-note">Total charge: <strong>${mbCharge(c.charges.reduce((a,b)=>a+b,0))}</strong> · target <strong>${mbCharge(m.charge)}</strong></p><details class="play-help"><summary>Formal charge rule</summary><p>FC = valence e⁻ − 2(lone pairs) − bond-order sum.</p></details></div></div></div>${mbTheory(s)}${s.hint?`<div class="mb-hint"><strong>Build in this order</strong><p>Connect the atoms, fill terminal shells, then use multiple bonds if needed. Keep H at two electrons and recount the total.</p></div>`:''}${mbFeedback(s)}<div class="mb-actions"><div class="actions">${s.complete?`<button class="btn primary" data-lab-action="mb-next">Next structure ${icon('arrow')}</button><button class="btn" data-lab-action="mb-reset">Build again</button>`:`<button class="btn primary" data-lab-action="mb-check">${s.lewisSolved&&['u23','u24'].includes(s.unit)?'Check predictions':'Check structure'} ${icon('check')}</button><button class="btn" data-lab-action="mb-hint">Hint</button><button class="btn text" data-lab-action="mb-solution">Show solution</button>`}</div></div></div>`;
+}
+function mbCheckCount(s){
+ if(s.countAccepted||s.complete)return;
+ const raw=s.countInput.trim(),target=mbAccounting(mbData(s),s.bonds,s.pairs).target;
+ if(!/^\d+$/.test(raw)||Number(raw)!==target){s.feedback={kind:'needs-work',title:'Check your count',messages:['Add valence electrons for every atom. Add electrons for a negative charge; subtract them for a positive charge.']};mbRecordWrong(s);return;}
+ s.countAccepted=true;s.hint=false;s.feedback={kind:'next-step',title:'Count correct. Start building!',messages:['The atoms are in place. Add all bonds and lone pairs yourself.']};
 }
 function mbId(s){return 'structure-'+s.id+'-'+s.unit;}
 function mbRecordWrong(s){if(!s.recordedWrong&&!s.recordedFinal){labRecord(mbId(s),false,!!s.assisted);s.recordedWrong=true;}}
 function mbCheck(s){
  if(s.complete)return;
+ if(!s.countAccepted){mbCheckCount(s);return;}
  const m=mbData(s),v=mbValidate(m,s.bonds,s.pairs);s.checks++;
  if(!v.correct){s.lewisSolved=false;s.feedback={kind:'needs-work',title:'Keep building',messages:v.issues.map(x=>x.title+': '+x.text)};mbRecordWrong(s);return;}
  s.lewisSolved=true;
  if(['u23','u24'].includes(s.unit)){
-  if(!s.shape||(s.unit==='u24'&&(!s.hybrid||s.sigma===''||s.pi===''))){s.feedback={kind:'next-step',title:'Lewis structure complete',messages:['Now use it to predict the shape'+(s.unit==='u24'?', hybridization, and σ/π bond counts':'')+'. Choose answers in step 02, then check them.']};return;}
+  if(!s.shape||(s.unit==='u24'&&(!s.hybrid||s.sigma===''||s.pi===''))){s.feedback={kind:'next-step',title:'Lewis structure complete',messages:['Now use it to predict the shape'+(s.unit==='u24'?', hybridization, and σ/π bond counts':'')+'. Choose answers in step 03, then check them.']};return;}
   const errors=[];
   if(s.shape!==m.shape)errors.push('Recount domains at '+mbAtomName(m,m.center)+'. Molecular geometry describes atom positions; lone pairs affect the shape but are not named as atoms.');
   if(s.unit==='u24'){
@@ -814,12 +932,16 @@ function mbCheck(s){
 }
 function mbEdited(s){s.feedback=null;s.lewisSolved=false;}
 function mbAct(s,action,el){
- const d=el.dataset,m=mbData(s);
- if(action==='mb-bond'&&!s.complete){const i=Number(d.index),value=Number(d.value);if(Number.isInteger(i)&&i>=0&&i<s.bonds.length&&[1,2,3].includes(value)){s.bonds[i]=value;mbEdited(s);}}
- else if(action==='mb-pair'&&!s.complete){const i=Number(d.index),delta=Number(d.delta);if(Number.isInteger(i)&&i>=0&&i<s.pairs.length&&[-1,1].includes(delta)){s.pairs[i]=Math.max(0,Math.min(4,s.pairs[i]+delta));mbEdited(s);}}
+ const d=el.dataset,m=mbData(s),editable=s.countAccepted&&!s.complete;
+ if(action==='mb-count-check'){const input=typeof document!=='undefined'?document.querySelector('#mb-electron-count'):null;if(input)s.countInput=input.value;mbCheckCount(s);}
+ else if(action==='mb-count-solution'&&!s.countAccepted){s.countInput=String(mbAccounting(m,s.bonds,s.pairs).target);s.assisted=true;s.hint=true;s.feedback={kind:'guided',title:'Electron count',messages:[mbCountHint(m)+' = '+s.countInput+' electrons. Press Check count to build it.']};}
+ else if(action==='mb-tool'&&editable&&['add','remove'].includes(d.value)){s.tool=d.value;}
+ else if(action==='mb-bond'&&editable){const i=Number(d.index),value=Number(d.value);if(Number.isInteger(i)&&i>=0&&i<s.bonds.length&&[0,1,2,3].includes(value)){s.bonds[i]=value;mbEdited(s);}}
+ else if(['mb-bond-step','mb-canvas-bond'].includes(action)&&editable){const i=Number(d.index),delta=action==='mb-canvas-bond'?(s.tool==='remove'?-1:1):Number(d.delta);if(Number.isInteger(i)&&i>=0&&i<s.bonds.length&&[-1,1].includes(delta)){s.bonds[i]=Math.max(0,Math.min(3,s.bonds[i]+delta));mbEdited(s);}}
+ else if(['mb-pair','mb-canvas-pair'].includes(action)&&editable){const i=Number(d.index),delta=action==='mb-canvas-pair'?(s.tool==='remove'?-1:1):Number(d.delta);if(Number.isInteger(i)&&i>=0&&i<s.pairs.length&&[-1,1].includes(delta)){s.pairs[i]=Math.max(0,Math.min(4,s.pairs[i]+delta));mbEdited(s);}}
  else if(action==='mb-check')mbCheck(s);
  else if(action==='mb-hint'){s.hint=true;s.assisted=true;}
- else if(action==='mb-solution'&&!s.complete){
+ else if(action==='mb-solution'&&editable){
   s.assisted=true;mbRecordWrong(s);s.bonds=[...m.bonds];s.pairs=[...m.pairs];s.shape=m.shape;s.hybrid=m.hybrid||'';s.sigma=String(m.edges.length);s.pi=String(m.bonds.reduce((n,b)=>n+b-1,0));s.lewisSolved=true;s.complete=true;s.recordedFinal=true;
   s.feedback={kind:'guided',title:'Solution',messages:[m.note,'Use Build again to try it yourself.']};
  }else if(action==='mb-next'){const pool=mbPool(s.unit),i=pool.findIndex(x=>x.id===s.id);Object.assign(s,mbNew(s.unit,pool[(i+1)%pool.length].id));}
@@ -828,9 +950,17 @@ function mbAct(s,action,el){
 function mbChange(s,el){
  const kind=el.dataset.labInput,value=el.value;
  if(kind==='mb-challenge'&&mbPool(s.unit).some(m=>m.id===value)){Object.assign(s,mbNew(s.unit,value));return;}
+ if(kind==='mb-count'&&!s.countAccepted){s.countInput=value;s.feedback=null;return false;}
  const field=kind?.replace(/^mb-/,'');if(['shape','hybrid','sigma','pi'].includes(field)&&!s.complete&&s.lewisSolved){s[field]=value;s.feedback=null;}
 }
-LABS.structure={title:'Molecule builder',description:'Place bonds and lone pairs. Find the shape.',icon:'bond',units:['u19','u20','u21','u23','u24'],create:unit=>mbNew(unit),render:mbRender,act:mbAct,change:mbChange};
+/* SVG targets share the button actions; Enter/Space makes them keyboard operable. */
+document.addEventListener('keydown',ev=>{
+ if(V.view!=='lab'||G?.mode!=='structure')return;
+ if(ev.key==='Enter'&&ev.target.id==='mb-electron-count'){ev.preventDefault();mbAct(G.state,'mb-count-check',{dataset:{}});draw();document.querySelector(G.state.countAccepted?'[data-lab-action="mb-tool"]':'#mb-electron-count')?.focus();return;}
+ const target=ev.target.closest('[data-lab-action="mb-canvas-bond"],[data-lab-action="mb-canvas-pair"]');
+ if(target&&['Enter',' '].includes(ev.key)){ev.preventDefault();target.dispatchEvent(new MouseEvent('click',{bubbles:true}));}
+});
+LABS.structure={title:'Molecule builder',description:'Count electrons. Build every bond and lone pair.',icon:'bond',units:['u19','u20','u21','u23','u24'],create:unit=>mbNew(unit),render:mbRender,act:mbAct,change:mbChange};
 
 /* Orbital Builder: original diagrams and activities grounded in Lectures 16–17 and 26–28. */
 const ORB_ATOMIC_LEVELS = [['1s',1],['2s',1],['2p',3],['3s',1],['3p',3]];
@@ -1262,6 +1392,288 @@ function ionChange(s,el){
  return false;
 }
 LABS.ions={title:'Ion builder',description:'Build ions. Make neutral formulas.',icon:'atom',units:['u2','u3','u4','u18'],create:ionCreate,render:ionRender,act:ionAct,change:ionChange};
+
+/* Original, fixed-skeleton resonance challenges. Arrows move electron pairs, never atoms. */
+const RS_SPECIES=[
+ {id:'carbonate',formula:'CO₃²⁻',name:'Carbonate',atoms:['C','O','O','O'],charge:-2,centerPairs:0,xy:[[210,136],[210,44],[94,216],[326,216]],order:'4/3',terminalCharge:'−2/3',centerCharge:0},
+ {id:'nitrate',formula:'NO₃⁻',name:'Nitrate',atoms:['N','O','O','O'],charge:-1,centerPairs:0,xy:[[210,136],[210,44],[94,216],[326,216]],order:'4/3',terminalCharge:'−2/3',centerCharge:1},
+ {id:'ozone',formula:'O₃',name:'Ozone',atoms:['O','O','O'],charge:0,centerPairs:1,xy:[[210,88],[96,210],[324,210]],order:'3/2',terminalCharge:'−1/2',centerCharge:1},
+ {id:'nitrite',formula:'NO₂⁻',name:'Nitrite',atoms:['N','O','O'],charge:-1,centerPairs:1,xy:[[210,88],[96,210],[324,210]],order:'3/2',terminalCharge:'−1/2',centerCharge:0}
+];
+const RS_VALENCE={C:4,N:5,O:6};
+function rsData(s){return RS_SPECIES.find(m=>m.id===s.id)||RS_SPECIES[0];}
+function rsName(m,i){return i===0?(m.atoms[0]==='O'?'Central O':m.atoms[0]):'O'+i;}
+function rsForm(m,double=0){return {bonds:m.atoms.slice(1).map((_,j)=>j===double?2:1),pairs:m.atoms.map((_,i)=>i===0?m.centerPairs:i===double+1?2:3)};}
+function rsNew(unit,id){const m=RS_SPECIES.find(m=>m.id===id)||RS_SPECIES[0];return {unit,id:m.id,mode:'arrows',...rsForm(m),source:null,arrows:[],found:[0],feedback:null,hint:false,hybrid:{order:'',charge:'',meaning:''},hybridDone:false};}
+function rsAccount(m,bonds,pairs){
+ const sums=m.atoms.map((_,i)=>i===0?bonds.reduce((a,b)=>a+b,0):bonds[i-1]);
+ return {electrons:2*(bonds.reduce((a,b)=>a+b,0)+pairs.reduce((a,b)=>a+b,0)),target:m.atoms.reduce((n,a)=>n+RS_VALENCE[a],0)-m.charge,shells:sums.map((b,i)=>2*b+2*pairs[i]),charges:sums.map((b,i)=>RS_VALENCE[m.atoms[i]]-2*pairs[i]-b)};
+}
+function rsPointValid(m,point){return typeof point==='string'&&/^[pab]\d+$/.test(point)&&+point.slice(1)<(point[0]==='b'?m.atoms.length-1:m.atoms.length);}
+function rsApply(m,bonds,pairs,arrows){
+ const next={bonds:[...bonds],pairs:[...pairs]},seen=new Set();
+ if(!arrows.length)return {correct:false,message:'Add curved arrows before applying the move.'};
+ for(const {from,to} of arrows){
+  if(!rsPointValid(m,from)||!rsPointValid(m,to))return {correct:false,message:'Choose an electron pair and an atom or bond on this structure.'};
+  if(seen.has(from))return {correct:false,message:'Use each selected electron pair once.'};seen.add(from);
+  const f=+from.slice(1),t=+to.slice(1);
+  if(from[0]==='p'&&to[0]==='b'){
+   if(pairs[f]<1||!(f===0||f===t+1))return {correct:false,message:'A lone-pair arrow must end in a bond attached to that atom.'};
+   next.pairs[f]--;next.bonds[t]++;
+  }else if(from[0]==='b'&&to[0]==='a'){
+   if(bonds[f]<2)return {correct:false,message:'Keep the σ skeleton. Start this arrow at a π bond, not a single bond.'};
+   if(!(t===0||t===f+1))return {correct:false,message:'Move the π pair onto an atom at that bond’s end.'};
+   next.bonds[f]--;next.pairs[t]++;
+  }else return {correct:false,message:'For these structures: lone pair → adjacent bond, or π bond → attached atom.'};
+ }
+ const c=rsAccount(m,next.bonds,next.pairs);
+ if(c.electrons!==c.target||c.charges.reduce((a,b)=>a+b,0)!==m.charge)return {correct:false,message:'Keep the same electron count and total charge.'};
+ if(next.bonds.some(b=>b<1)||next.pairs.some(p=>p<0))return {correct:false,message:'Keep every σ bond and use only electron pairs that exist.'};
+ if(c.shells.some(n=>n!==8))return {correct:false,message:'Apply both arrows together: one pair makes a π bond while the old π pair becomes a lone pair. Every atom must keep an octet.'};
+ const index=next.bonds.findIndex(n=>n===2),expected=rsForm(m,index);
+ if(index<0||!next.bonds.every((n,i)=>n===expected.bonds[i])||!next.pairs.every((n,i)=>n===expected.pairs[i]))return {correct:false,message:'Find another equivalent, complete-octet contributor without moving atoms.'};
+ if(next.bonds.every((n,i)=>n===bonds[i]))return {correct:false,message:'Those arrows return to the same contributor. Move the double bond to a different O.'};
+ return {correct:true,index,...next,account:c};
+}
+function rsPointXY(m,point){
+ const i=+point.slice(1);
+ if(point[0]==='b'){const a=m.xy[0],b=m.xy[i+1];return [(a[0]+b[0])/2,(a[1]+b[1])/2];}
+ const [x,y]=m.xy[i];if(point[0]==='a')return [x,y];
+ if(i===0)return [x,y-31];
+ const [cx,cy]=m.xy[0],len=Math.hypot(x-cx,y-cy);return [x+31*(x-cx)/len,y+31*(y-cy)/len];
+}
+function rsArrow(m,form,arrow,i,uid){
+ const a=rsPointXY(m,arrow.from);let b=rsPointXY(m,arrow.to);
+ if(arrow.to[0]==='a'){
+  const atom=+arrow.to.slice(1),[x,y]=m.xy[atom],base=atom===0?-Math.PI/2:Math.atan2(y-m.xy[0][1],x-m.xy[0][0]);
+  const angles=atom===0?[-Math.PI/2,Math.PI/2,Math.PI,0]:[base,base+Math.PI/2,base-Math.PI/2],angle=angles[Math.min(form.pairs[atom],angles.length-1)];
+  b=[x+30*Math.cos(angle),y+30*Math.sin(angle)];
+ }
+ const dx=b[0]-a[0],dy=b[1]-a[1],len=Math.hypot(dx,dy)||1,bend=42;
+ const tx=b[0]-dx/len*8,ty=b[1]-dy/len*8,cx=(a[0]+b[0])/2-dy/len*bend,cy=(a[1]+b[1])/2+dx/len*bend;
+ return `<path class="rs-arrow rs-arrow-${i%2}" d="M${a[0]} ${a[1]} Q${cx} ${cy} ${tx} ${ty}" marker-end="url(#rs-arrowhead-${uid}-${i%2})"/>`;
+}
+function rsDiagram(m,form,options={}){
+ const {interactive=false,source=null,arrows=[],hybrid=false,uid='main'}=options,c=rsAccount(m,form.bonds,form.pairs);
+ const edges=form.bonds.map((order,j)=>{
+  const a=m.xy[0],b=m.xy[j+1],dx=b[0]-a[0],dy=b[1]-a[1],len=Math.hypot(dx,dy),ux=dx/len,uy=dy/len;
+  const lines=Array.from({length:hybrid?2:order},(_,k)=>{const off=(k-((hybrid?2:order)-1)/2)*7;return `<line class="rs-bond${hybrid&&k===1?' rs-delocalized':''}" x1="${a[0]+ux*24-uy*off}" y1="${a[1]+uy*24+ux*off}" x2="${b[0]-ux*24-uy*off}" y2="${b[1]-uy*24+ux*off}"/>`;}).join('');
+  const mid=rsPointXY(m,'b'+j);
+  return lines+(interactive?`<circle class="rs-hit ${source==='b'+j?'is-selected':''}" cx="${mid[0]}" cy="${mid[1]}" r="20" data-lab-action="rs-point" data-point="b${j}" role="button" tabindex="0" aria-label="${e(rsName(m,0)+' to '+rsName(m,j+1))} ${order===2?'π bond':'bond'}"/>`:'');
+ }).join('');
+ const atoms=m.atoms.map((atom,i)=>{
+  const [x,y]=m.xy[i],name=rsName(m,i),fc=hybrid?0:c.charges[i];
+  const angles=i===0?[-Math.PI/2,Math.PI/2,Math.PI,0]:(()=>{const [cx,cy]=m.xy[0],angle=Math.atan2(y-cy,x-cx);return [angle,angle+Math.PI/2,angle-Math.PI/2];})();
+  const pairs=hybrid?'':angles.slice(0,form.pairs[i]).map((angle,k)=>{const xx=x+30*Math.cos(angle),yy=y+30*Math.sin(angle);return `<g${interactive&&k===0?` class="rs-pair ${source==='p'+i?'is-selected':''}" data-lab-action="rs-source" data-point="p${i}" role="button" tabindex="0" aria-label="Lone pair on ${e(name)}"`:''}><circle class="rs-pair-target" cx="${xx}" cy="${yy}" r="11"/><circle class="rs-dot" cx="${xx-3*Math.sin(angle)}" cy="${yy+3*Math.cos(angle)}" r="2.7"/><circle class="rs-dot" cx="${xx+3*Math.sin(angle)}" cy="${yy-3*Math.cos(angle)}" r="2.7"/></g>`;}).join('');
+  return `<g><circle class="rs-atom${interactive?' rs-atom-hit':''}" cx="${x}" cy="${y}" r="22"${interactive?` data-lab-action="rs-point" data-point="a${i}" role="button" tabindex="0" aria-label="${e(name)} atom${form.pairs[i]?', or its lone pair':''}"`:''}/><text class="rs-symbol" x="${x}" y="${y+7}">${atom}</text><text class="rs-atom-index" x="${x+13}" y="${y+14}">${i||''}</text>${pairs}${fc!==0&&fc!=='0'?`<text class="rs-charge" x="${x+25}" y="${y-18}">${fc>0?'+'+fc:String(fc).replace('-', '−')}</text>`:''}</g>`;
+ }).join('');
+ const label=hybrid?`${m.name} resonance hybrid: equivalent bonds, model bond order ${m.order}.`:`${m.name} Lewis contributor. ${form.bonds.map((n,j)=>rsName(m,0)+'–'+rsName(m,j+1)+': '+n).join('; ')}. Formal charges: ${c.charges.map((n,i)=>rsName(m,i)+' '+n).join(', ')}.`;
+ return `<svg class="rs-diagram" viewBox="0 0 420 290" role="${interactive?'group':'img'}" aria-label="${e(label)}"><defs><marker id="rs-arrowhead-${uid}-0" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0 0L6 3L0 6Z" fill="#ca5080"/></marker><marker id="rs-arrowhead-${uid}-1" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0 0L6 3L0 6Z" fill="#496bcb"/></marker></defs>${m.charge?`<path class="rs-bracket" d="M26 20H17V270H26M394 20H403V270H394"/><text class="rs-total-charge" x="393" y="15">${Math.abs(m.charge)===1?'':Math.abs(m.charge)}−</text>`:''}${edges}${atoms}${arrows.map((a,i)=>rsArrow(m,form,a,i,uid)).join('')}</svg>`;
+}
+function rsFeedback(s){return s.feedback?`<div class="rs-feedback ${s.feedback.kind}" role="status"><strong>${e(s.feedback.title)}</strong><p>${e(s.feedback.text)}</p></div>`:'';}
+function rsPointLabel(m,p){return p[0]==='b'?rsName(m,0)+'–'+rsName(m,+p.slice(1)+1)+' bond':rsName(m,+p.slice(1))+(p[0]==='p'?' lone pair':' atom');}
+function rsChoice(s,point,source){const m=rsData(s);return `<button class="rs-point-choice ${s.source===point?'is-selected':''}" data-lab-action="${source?'rs-source':'rs-target'}" data-point="${point}" ${source?`aria-pressed="${s.source===point}"`:!s.source?'disabled':''}>${e(rsPointLabel(m,point))}</button>`;}
+function rsContributors(m,indices){return `<div class="rs-contributors">${indices.map((i,k)=>`<figure><figcaption>Contributor ${i+1}</figcaption>${rsDiagram(m,rsForm(m,i),{uid:'form-'+i})}</figure>${k<indices.length-1?'<span class="rs-resonance-symbol" aria-label="resonance contributors">↔</span>':''}`).join('')}</div>`;}
+function rsArrowsView(s){
+ const m=rsData(s),all=s.found.length===m.atoms.length-1;
+ return `<div class="rs-workspace"><section class="rs-canvas"><div class="rs-canvas-label"><strong>Make another contributor</strong><span>${m.atoms.reduce((n,a)=>n+RS_VALENCE[a],0)-m.charge} valence e⁻</span></div>${rsDiagram(m,s,{interactive:true,source:s.source,arrows:s.arrows})}<p class="rs-canvas-note">Tap an electron pair, then its destination.</p></section><section class="rs-arrow-controls"><h3>Draw the arrows</h3><p>Choose a start and an end for each electron pair.</p><div class="rs-step"><strong>1 · Start at electrons</strong><div class="rs-point-buttons">${s.pairs.flatMap((n,i)=>n?[rsChoice(s,'p'+i,true)]:[]).join('')}${s.bonds.flatMap((n,i)=>n>1?[rsChoice(s,'b'+i,true)]:[]).join('')}</div></div><div class="rs-step"><strong>2 · Point to a bond or atom</strong><div class="rs-point-buttons">${s.bonds.map((_,i)=>rsChoice(s,'b'+i,false)).join('')}${m.atoms.map((_,i)=>rsChoice(s,'a'+i,false)).join('')}</div></div><div class="rs-arrow-list">${s.arrows.length?s.arrows.map((a,i)=>`<div><span>${i+1}. ${e(rsPointLabel(m,a.from))} → ${e(rsPointLabel(m,a.to))}</span><button data-lab-action="rs-remove" data-index="${i}" aria-label="Remove arrow ${i+1}">×</button></div>`).join(''):'<p>No arrows yet.</p>'}</div><div class="actions"><button class="btn primary" data-lab-action="rs-apply" ${s.arrows.length?'':'disabled'}>Apply arrows together</button><button class="btn text" data-lab-action="rs-clear">Clear arrows</button></div></section></div>${rsFeedback(s)}<div class="rs-found"><h3>Your contributors</h3>${rsContributors(m,s.found)}${all?'<button class="btn primary" data-lab-action="rs-mode" data-mode="hybrid">Build the hybrid →</button>':'<p>Find each equivalent major octet contributor.</p>'}</div><details class="play-help"><summary>How electron pushing works</summary><p>A full curved arrow moves one electron pair. Start at a lone pair or π bond and point to where that pair belongs in the next drawing. Apply the arrows together so the central atom keeps its octet. Keep the atoms and σ bonds fixed.</p><p>These drawings describe one delocalized species. They are not separate molecules switching back and forth.</p><button class="btn" data-lab-action="rs-hint">Show a pair of arrows</button></details>`;
+}
+function rsHybridField(s,key,title,options){return `<fieldset class="rs-hybrid-field"><legend>${title}</legend><div class="rs-hybrid-options">${options.map(([value,label])=>`<button type="button" class="rs-answer ${s.hybrid[key]===value?'is-selected':''}" data-lab-action="rs-answer" data-field="${key}" data-value="${value}" aria-pressed="${s.hybrid[key]===value}" ${s.hybridDone?'disabled':''}>${label}</button>`).join('')}</div></fieldset>`;}
+function rsHybridView(s){
+ const m=rsData(s),all=m.atoms.slice(1).map((_,i)=>i);
+ return `<section class="rs-hybrid-intro"><h3>Combine the contributors</h3><p>These symmetry-equivalent contributors have equal weight in this model.</p>${rsContributors(m,all)}</section><div class="rs-hybrid-grid"><section>${rsHybridField(s,'order','Bond order of every '+rsName(m,0)+'–O bond',[['1','1'],['4/3','4/3'],['3/2','3/2'],['2','2']])}${rsHybridField(s,'charge','Average formal charge on each terminal O',[['0','0'],['−1/3','−1/3'],['−1/2','−1/2'],['−2/3','−2/3'],['−1','−1']])}${rsHybridField(s,'meaning','What does the hybrid represent?',[['delocalized','One structure with delocalized electrons'],['switching','Bonds switching between drawings'],['mixture','A mixture of separate molecules']])}<button class="btn primary" data-lab-action="rs-check-hybrid" ${s.hybridDone?'disabled':''}>Check hybrid</button></section><section class="rs-hybrid-picture ${s.hybridDone?'is-revealed':''}">${s.hybridDone?`<h3>Resonance hybrid</h3>${rsDiagram(m,rsForm(m),{hybrid:true,uid:'hybrid'})}<p>Solid line: σ bond · dashed line: shared π bonding</p><p><strong>Every bond: ${m.order}</strong></p><table class="rs-charge-table"><caption>Average formal charge · model</caption><thead><tr><th>Position</th><th>Charge</th></tr></thead><tbody><tr><td>Each terminal O</td><td>${m.terminalCharge}</td></tr><tr><td>${rsName(m,0)}</td><td>${m.centerCharge>0?'+':''}${m.centerCharge}</td></tr></tbody></table>`:'<div class="rs-hybrid-mystery" aria-hidden="true">↔</div><h3>One species. Shared electrons.</h3><p>Choose the bond order and charge distribution to reveal the hybrid.</p>'}</section></div>${rsFeedback(s)}<details class="play-help"><summary>Bond order and charge</summary><p>Average each bond’s order over the equivalent drawings. Average formal charges the same way. Fractional charge labels here are formal-charge bookkeeping; they are not measured atomic partial charges. Unequal contributors generally need unequal weighting.</p><p>The central atom’s formal charge is ${m.centerCharge>0?'+':''}${m.centerCharge}; the sum over the whole species remains ${m.charge>0?'+':''}${m.charge}.</p></details>`;
+}
+function rsRender(s){const m=rsData(s);return `<div class="rs-lab"><div class="rs-species" role="group" aria-label="Choose a molecule">${RS_SPECIES.map(x=>`<button data-lab-action="rs-species" data-id="${x.id}" class="${x.id===s.id?'is-selected':''}" aria-pressed="${x.id===s.id}"><strong>${x.formula}</strong><span>${x.name}</span></button>`).join('')}</div><div class="rs-mode-buttons" role="group" aria-label="Choose a resonance game"><button data-lab-action="rs-mode" data-mode="arrows" class="${s.mode==='arrows'?'is-selected':''}" aria-pressed="${s.mode==='arrows'}"><strong>Electron arrows</strong><span>Build equivalent contributors</span></button><button data-lab-action="rs-mode" data-mode="hybrid" class="${s.mode==='hybrid'?'is-selected':''}" aria-pressed="${s.mode==='hybrid'}"><strong>Resonance hybrid</strong><span>Combine bonds and charges</span></button></div>${s.mode==='hybrid'?rsHybridView(s):rsArrowsView(s)}<div class="rs-bottom-actions"><button class="btn text" data-lab-action="rs-reset">Restart ${e(m.name.toLowerCase())}</button><button class="btn" data-lab-action="rs-next">Next molecule ${icon('arrow')}</button></div></div>`;}
+function rsSetSource(s,point){
+ const m=rsData(s);if(!rsPointValid(m,point))return;
+ const i=+point.slice(1);if(!((point[0]==='p'&&s.pairs[i]>0)||(point[0]==='b'&&s.bonds[i]>1))){s.feedback={kind:'needs-work',title:'Start at electrons',text:'Choose a lone pair or a π bond. Keep the single-bond skeleton fixed.'};return;}
+ s.source=s.source===point?null:point;s.feedback=null;
+}
+function rsSetTarget(s,point){if(!s.source||!rsPointValid(rsData(s),point)||!['a','b'].includes(point[0]))return;if(s.arrows.length>=4){s.feedback={kind:'needs-work',title:'Review the arrows',text:'Remove an arrow before adding another. A contributor here needs a coordinated pair of arrows.'};return;}s.arrows.push({from:s.source,to:point});s.source=null;s.feedback=null;}
+function rsAct(s,action,el){
+ const d=el.dataset,m=rsData(s);
+ if(action==='rs-species'&&RS_SPECIES.some(x=>x.id===d.id)){const mode=s.mode;Object.assign(s,rsNew(s.unit,d.id));s.mode=mode;}
+ else if(action==='rs-mode'&&['arrows','hybrid'].includes(d.mode)){s.mode=d.mode;s.feedback=null;s.source=null;}
+ else if(action==='rs-source')rsSetSource(s,d.point);
+ else if(action==='rs-target')rsSetTarget(s,d.point);
+ else if(action==='rs-point'){if(s.source)rsSetTarget(s,d.point);else rsSetSource(s,d.point[0]==='a'?'p'+d.point.slice(1):d.point);}
+ else if(action==='rs-remove'){const i=Number(d.index);if(Number.isInteger(i)&&i>=0&&i<s.arrows.length)s.arrows.splice(i,1);s.feedback=null;}
+ else if(action==='rs-clear'){s.arrows=[];s.source=null;s.feedback=null;}
+ else if(action==='rs-apply'){
+  const result=rsApply(m,s.bonds,s.pairs,s.arrows);
+  if(!result.correct){s.feedback={kind:'needs-work',title:'Check the electron flow',text:result.message};return;}
+  const known=s.found.includes(result.index);s.bonds=result.bonds;s.pairs=result.pairs;if(!known)s.found.push(result.index);s.arrows=[];s.source=null;
+  s.feedback={kind:'success',title:known?'Valid contributor':'Contributor built!',text:s.found.length===m.atoms.length-1?'All equivalent major octet contributors found. Combine them into a resonance hybrid.':known?'You already found this one. Try putting the double bond on another O.':'Same atoms, electron total, and charge; a new placement of the π electrons.'};
+ }else if(action==='rs-hint'){
+  const old=s.bonds.findIndex(b=>b===2),next=s.bonds.findIndex((b,i)=>b===1&&!s.found.includes(i));const target=next>=0?next:s.bonds.findIndex(b=>b===1);
+  s.arrows=[{from:'p'+(target+1),to:'b'+target},{from:'b'+old,to:'a'+(old+1)}];s.source=null;s.hint=true;s.feedback={kind:'guided',title:'Two arrows, one update',text:'The lone pair makes a π bond. The old π pair returns to its terminal O. Apply both together.'};
+ }else if(action==='rs-answer'&&!s.hybridDone&&['order','charge','meaning'].includes(d.field)){s.hybrid[d.field]=d.value;s.feedback=null;}
+ else if(action==='rs-check-hybrid'&&!s.hybridDone){
+  if(Object.values(s.hybrid).some(v=>!v)){s.feedback={kind:'needs-work',title:'Choose all three answers',text:'Set a bond order, an average formal charge, and a meaning for the hybrid.'};return;}
+  const wrong=[];if(s.hybrid.order!==m.order)wrong.push('Add one bond’s orders across all drawings, then divide by the number of drawings.');if(s.hybrid.charge!==m.terminalCharge)wrong.push('Follow the same terminal O through each drawing and average its formal charges.');if(s.hybrid.meaning!=='delocalized')wrong.push('The real species has delocalized electrons; the drawings are contributors, not alternating molecules.');
+  if(wrong.length)s.feedback={kind:'needs-work',title:'Refine the hybrid',text:wrong.join(' ')};
+  else{s.hybridDone=true;s.feedback={kind:'success',title:'Hybrid built!',text:`Every ${rsName(m,0)}–O bond is equivalent. The equal-contributor model gives bond order ${m.order} and terminal-O average formal charge ${m.terminalCharge}. This is one delocalized species, not switching drawings; the charge average is bookkeeping, not a measured partial charge.`};}
+ }else if(action==='rs-reset'){const mode=s.mode;Object.assign(s,rsNew(s.unit,s.id));s.mode=mode;}
+ else if(action==='rs-next'){const index=RS_SPECIES.findIndex(x=>x.id===s.id),mode=s.mode;Object.assign(s,rsNew(s.unit,RS_SPECIES[(index+1)%RS_SPECIES.length].id));s.mode=mode;}
+}
+LABS.resonance={title:'Resonance lab',description:'Push electrons. Build the hybrid.',icon:'bond',units:['u21'],create:rsNew,render:rsRender,act:rsAct,change(){return false;}};
+document.addEventListener('keydown',ev=>{if(!['Enter',' '].includes(ev.key))return;const el=ev.target.closest('svg [data-lab-action^="rs-"]');if(el){ev.preventDefault();el.dispatchEvent(new MouseEvent('click',{bubbles:true}));}});
+
+/* Original VSEPR models: ideal domain directions, never measured molecular coordinates. */
+const GEO_ELECTRON_NAMES={2:'Linear',3:'Trigonal planar',4:'Tetrahedral',5:'Trigonal bipyramidal',6:'Octahedral'};
+const GEO_SHAPES=['Linear','Bent','Trigonal planar','Trigonal pyramidal','Tetrahedral','Seesaw','T-shaped','Trigonal bipyramidal','Square planar','Square pyramidal','Octahedral'];
+const GEO_CASES=[
+ {id:'co2',formula:'CO₂',name:'Carbon dioxide',center:'C',outer:'O',domains:2,lone:[],orders:[2,2],shape:'Linear',valence:16,angle:'180°',note:'Each C=O double bond occupies one direction. Two bonding domains place the oxygen atoms on opposite sides of carbon.'},
+ {id:'bf3',formula:'BF₃',name:'Boron trifluoride',center:'B',outer:'F',domains:3,lone:[],shape:'Trigonal planar',valence:24,angle:'120°',note:'Three B–F bonds and no central lone pairs give the same name to both geometries. Boron has six electrons in its usual Lewis structure.'},
+ {id:'so2',formula:'SO₂',name:'Sulfur dioxide',center:'S',outer:'O',domains:3,lone:[0],orders:[2,2],shape:'Bent',valence:18,angle:'Slightly less than 120°',note:'Two S–O directions and one lone pair make three domains. The atoms form a bent structure. This domain model is unchanged by the choice of Lewis contributor.'},
+ {id:'ch4',formula:'CH₄',name:'Methane',center:'C',outer:'H',domains:4,lone:[],shape:'Tetrahedral',valence:8,angle:'About 109.5°',note:'The four C–H directions point toward the corners of a tetrahedron. A flat cross-shaped Lewis drawing does not mean square planar.'},
+ {id:'nh3',formula:'NH₃',name:'Ammonia',center:'N',outer:'H',domains:4,lone:[0],shape:'Trigonal pyramidal',valence:8,angle:'About 107° (less than 109.5°)',note:'One of four domains is a lone pair. Removing it from the name leaves a triangular pyramid of atoms; it does not flatten the molecule.'},
+ {id:'h2o',formula:'H₂O',name:'Water',center:'O',outer:'H',domains:4,lone:[0,1],shape:'Bent',valence:8,angle:'About 104.5° (less than 109.5°)',note:'Two bonds and two lone pairs give four domains. Water and sulfur dioxide are both bent, but their electron-pair geometries differ.'},
+ {id:'pcl5',formula:'PCl₅',name:'Phosphorus pentachloride',center:'P',outer:'Cl',domains:5,lone:[],shape:'Trigonal bipyramidal',valence:40,angle:'90°, 120°, and 180°',note:'The isolated PCl₅ molecule has three equatorial and two axial bonds. This is the molecular model, not the ionic arrangement in solid PCl₅.'},
+ {id:'sf4',formula:'SF₄',name:'Sulfur tetrafluoride',center:'S',outer:'F',domains:5,lone:[0],shape:'Seesaw',valence:34,angle:'Distorted from 90°, 120°, and 180°',note:'The lone pair occupies an equatorial site, where it has fewer 90° interactions. The four remaining atom positions form a seesaw.'},
+ {id:'clf3',formula:'ClF₃',name:'Chlorine trifluoride',center:'Cl',outer:'F',domains:5,lone:[0,1],shape:'T-shaped',valence:28,angle:'Near 90° and 180°; slightly compressed',note:'Both lone pairs occupy equatorial sites. Two axial bonds and the remaining equatorial bond form a T.'},
+ {id:'xef2',formula:'XeF₂',name:'Xenon difluoride',center:'Xe',outer:'F',domains:5,lone:[0,1,2],shape:'Linear',valence:22,angle:'180°',note:'Three equatorial lone pairs leave two opposite axial bonds. Linear molecular structure does not always mean two electron domains.'},
+ {id:'sf6',formula:'SF₆',name:'Sulfur hexafluoride',center:'S',outer:'F',domains:6,lone:[],shape:'Octahedral',valence:48,angle:'90° and 180°',note:'Six bonding domains and no central lone pairs point toward the six vertices of an octahedron.'},
+ {id:'brf5',formula:'BrF₅',name:'Bromine pentafluoride',center:'Br',outer:'F',domains:6,lone:[5],shape:'Square pyramidal',valence:42,angle:'Near 90° and 180°; slightly distorted',note:'One lone pair occupies one of six octahedral sites. Four fluorines form the square base and a fifth forms the apex.'},
+ {id:'xef4',formula:'XeF₄',name:'Xenon tetrafluoride',center:'Xe',outer:'F',domains:6,lone:[4,5],shape:'Square planar',valence:36,angle:'90° and 180°',note:'The two lone pairs occupy opposite sites. The remaining four Xe–F directions lie in one square plane.'}
+];
+function geoDirections(n){
+ const r=Math.sqrt(3),t=1/Math.sqrt(3);
+ if(n===2)return [[-1,0,0],[1,0,0]];
+ if(n===3)return [[0,1,0],[-r/2,-.5,0],[r/2,-.5,0]];
+ if(n===4)return [[t,t,t],[t,-t,-t],[-t,t,-t],[-t,-t,t]];
+ if(n===5)return [[1,0,0],[-.5,0,r/2],[-.5,0,-r/2],[0,1,0],[0,-1,0]];
+ return [[1,0,0],[-1,0,0],[0,0,1],[0,0,-1],[0,1,0],[0,-1,0]];
+}
+function geoData(s){return GEO_CASES.find(m=>m.id===s.id)||GEO_CASES[0];}
+function geoPool(s){return GEO_CASES.filter(m=>s.family==='all'||(s.family==='core'?m.domains<=4:m.domains>=5));}
+function geoInitialView(id){const n=GEO_CASES.find(m=>m.id===id)?.domains;return n===4?{yaw:12,pitch:10}:n===5?{yaw:0,pitch:25}:{yaw:28,pitch:18};}
+function geoNew(unit,id='h2o',mode='challenge',family='all'){
+ return {unit,id:GEO_CASES.some(m=>m.id===id)?id:'h2o',mode,family,view:'atoms',...geoInitialView(id),answerDomains:'',answerElectron:'',answerShape:'',feedback:null,complete:false,hint:false};
+}
+function geoAX(m){const x=m.domains-m.lone.length,l=m.lone.length;return 'AX'+x+(l?'E'+(l>1?l:''):'');}
+function geoRotate(v,yaw,pitch){
+ const a=yaw*Math.PI/180,b=pitch*Math.PI/180;
+ const x=v[0]*Math.cos(a)+v[2]*Math.sin(a),z=-v[0]*Math.sin(a)+v[2]*Math.cos(a);
+ return [x,v[1]*Math.cos(b)-z*Math.sin(b),v[1]*Math.sin(b)+z*Math.cos(b)];
+}
+function geoProject(v,s){const [x,y,z]=geoRotate(v,s.yaw,s.pitch),scale=1+z*.14;return {x:220+x*115*scale,y:172-y*115*scale,z,scale};}
+function geoModel(s){
+ const m=geoData(s),dirs=geoDirections(m.domains),items=[];let bondIndex=0;
+ const atomColors={C:'#63718a',B:'#e6aa5b',S:'#e9c447',P:'#f4a55e',Cl:'#67c5a2',Xe:'#9d88dc',Br:'#d98b7e',N:'#6e9fea',O:'#eb7b91',F:'#71c9b7',H:'#e6eaf3'};
+ dirs.forEach((v,i)=>{
+  const p=geoProject(v,s),lone=m.lone.includes(i);
+  if(lone&&s.view==='atoms')return;
+  if(lone){
+   const mid=geoProject(v.map(x=>x*.61),s),dx=p.x-220,dy=p.y-172,angle=Math.atan2(dy,dx)*180/Math.PI;
+   items.push({depth:p.z*.55,html:`<g class="geo-lone"><ellipse cx="${mid.x.toFixed(2)}" cy="${mid.y.toFixed(2)}" rx="${(35*p.scale).toFixed(2)}" ry="${(20*p.scale).toFixed(2)}" transform="rotate(${angle.toFixed(2)} ${mid.x.toFixed(2)} ${mid.y.toFixed(2)})"/><circle cx="${(mid.x-4).toFixed(2)}" cy="${mid.y.toFixed(2)}" r="3"/><circle cx="${(mid.x+4).toFixed(2)}" cy="${mid.y.toFixed(2)}" r="3"/></g>`});
+  }else{
+   const order=(m.orders||[])[bondIndex++]||1,dx=p.x-220,dy=p.y-172,len=Math.hypot(dx,dy)||1;
+   const line=Array.from({length:order},(_,j)=>{const off=(j-(order-1)/2)*7,start=Math.sqrt(Math.max(0,27*27-off*off)),end=Math.sqrt(Math.max(0,(20*p.scale)**2-off*off));if(len<=start+end)return '';return `<line x1="${(220+dx/len*start-dy/len*off).toFixed(2)}" y1="${(172+dy/len*start+dx/len*off).toFixed(2)}" x2="${(p.x-dx/len*end-dy/len*off).toFixed(2)}" y2="${(p.y-dy/len*end+dx/len*off).toFixed(2)}" class="geo-bond"/>`;}).join('');
+   items.push({depth:p.z,html:`<g opacity="${p.z<0?'.83':'1'}">${line}<circle cx="${p.x.toFixed(2)}" cy="${p.y.toFixed(2)}" r="${(20*p.scale).toFixed(2)}" fill="${atomColors[m.outer]||'#a9a1d8'}" class="geo-atom"/><circle cx="${(p.x-6*p.scale).toFixed(2)}" cy="${(p.y-7*p.scale).toFixed(2)}" r="${(5*p.scale).toFixed(2)}" class="geo-shine"/><text x="${p.x.toFixed(2)}" y="${(p.y+5*p.scale).toFixed(2)}" font-size="${(15*p.scale).toFixed(2)}" class="geo-atom-label">${m.outer}</text></g>`});
+  }
+ });
+ items.push({depth:0,html:`<g><circle cx="220" cy="172" r="27" fill="${atomColors[m.center]||'#a9a1d8'}" class="geo-atom"/><circle cx="211" cy="162" r="7" class="geo-shine"/><text x="220" y="178" font-size="19" class="geo-atom-label">${m.center}</text></g>`});
+ return `<svg viewBox="0 0 440 344" role="img" aria-label="Rotatable, idealized ${e(m.formula)} model; ${s.view==='domains'?'bonding directions and central lone pairs':'atoms and bonds only'}." class="geo-svg"><ellipse cx="220" cy="310" rx="112" ry="9" class="geo-ground"/>${items.sort((a,b)=>a.depth-b.depth).map(x=>x.html).join('')}</svg>`;
+}
+function geoOptions(s,field,values){return `<div class="geo-options" role="group" aria-label="${field==='answerDomains'?'Electron-domain count':field==='answerElectron'?'Electron-pair geometry':'Molecular structure'}">${values.map(value=>`<button class="geo-answer ${String(s[field])===String(value)?'selected':''}" data-lab-action="geo-answer" data-field="${field}" data-value="${e(value)}" aria-pressed="${String(s[field])===String(value)}" ${s.complete?'disabled':''}>${e(value)}</button>`).join('')}</div>`;}
+function geoAnswerCard(s){
+ const m=geoData(s),n=m.domains-m.lone.length;
+ return `<div class="geo-solution"><div class="geo-solution-pair"><div><span>Electron-pair geometry</span><strong>${GEO_ELECTRON_NAMES[m.domains]}</strong><small>${m.domains} domains: ${n} bonded atoms + ${m.lone.length} lone ${m.lone.length===1?'pair':'pairs'}</small></div><div><span>Molecular structure</span><strong>${m.shape}</strong><small>${science(geoAX(m))} · name only the atom positions</small></div></div><p>${e(m.note)}</p><p class="geo-angle"><b>Bond angles:</b> ${e(m.angle)}.</p></div>`;
+}
+function geoRender(s){
+ const m=geoData(s),pool=geoPool(s),reveal=s.mode==='explore'||s.complete;
+ return `<div class="geo-lab"><div class="geo-mode-buttons" role="group" aria-label="Shape lab mode">${[['challenge','Shape challenge','Name both geometries'],['explore','Explore 3D','Turn models and reveal shapes']].map(([key,title,copy])=>`<button data-lab-action="geo-mode" data-value="${key}" class="${s.mode===key?'selected':''}" aria-pressed="${s.mode===key}"><strong>${title}</strong><span>${copy}</span></button>`).join('')}</div><div class="geo-family" role="group" aria-label="Shape family">${[['all','All shapes'],['core','2–4 domains'],['expanded','5–6 domains']].map(([key,label])=>`<button data-lab-action="geo-family" data-value="${key}" class="${s.family===key?'selected':''}" aria-pressed="${s.family===key}">${label}</button>`).join('')}</div><div class="geo-species" role="group" aria-label="Choose a molecule">${pool.map(x=>`<button data-lab-action="geo-species" data-value="${x.id}" class="${s.id===x.id?'selected':''}" aria-pressed="${s.id===x.id}" title="${e(x.name)}">${science(x.formula)}</button>`).join('')}</div><div class="geo-heading"><h2>${science(m.formula)} <span>${m.name}</span></h2><p>Focus on the central ${m.center} atom.</p></div><div class="geo-workspace"><section class="geo-stage"><div class="geo-view-toggle" role="group" aria-label="Model display"><button data-lab-action="geo-view" data-value="atoms" aria-pressed="${s.view==='atoms'}" class="${s.view==='atoms'?'selected':''}">Atoms only</button><button data-lab-action="geo-view" data-value="domains" aria-pressed="${s.view==='domains'}" class="${s.view==='domains'?'selected':''}">Show lone pairs</button></div><div id="geo-model" class="geo-model" data-geo-drag tabindex="0" aria-label="Rotate molecule. Use arrow keys or drag.">${geoModel(s)}</div><div class="geo-rotation"><button data-lab-action="geo-rotate" data-axis="yaw" data-step="-25" aria-label="Rotate left">↶</button><label>Turn<input type="range" min="-180" max="180" value="${s.yaw}" data-lab-input="geo-yaw" aria-label="Horizontal rotation"></label><button data-lab-action="geo-rotate" data-axis="yaw" data-step="25" aria-label="Rotate right">↷</button><button data-lab-action="geo-reset-view">Reset view</button></div><div class="geo-tilt"><label>Tilt<input type="range" min="-80" max="80" value="${s.pitch}" data-lab-input="geo-pitch" aria-label="Vertical rotation"></label></div><p class="geo-model-note">Drag to turn · idealized VSEPR model</p>${s.view==='domains'?'<p class="geo-lone-key"><span aria-hidden="true">••</span> Central lone-pair domains</p>':''}</section><section class="geo-task">${reveal?geoAnswerCard(s):`<fieldset><legend>1. How many electron domains?</legend>${geoOptions(s,'answerDomains',[2,3,4,5,6])}</fieldset><fieldset><legend>2. Electron-pair geometry</legend><p>Include central lone pairs.</p>${geoOptions(s,'answerElectron',Object.values(GEO_ELECTRON_NAMES))}</fieldset><fieldset><legend>3. Molecular structure</legend><p>Name the atom positions.</p>${geoOptions(s,'answerShape',GEO_SHAPES)}</fieldset><details class="geo-clue"><summary>Lewis clues</summary><p>${m.formula} has ${m.valence} total valence electrons. Around ${m.center}: ${m.domains-m.lone.length} bonded atoms and ${m.lone.length} lone ${m.lone.length===1?'pair':'pairs'}. A multiple bond counts as one domain.</p></details>`}</section></div>${s.feedback?`<div class="geo-feedback ${s.feedback.good?'correct':'retry'}" role="status"><strong>${s.feedback.good?'Both geometries found!':'Try another look'}</strong><p>${e(s.feedback.text)}</p></div>`:''}<div class="geo-actions">${s.mode==='challenge'&&!s.complete?'<button class="btn primary" data-lab-action="geo-check">Check shapes</button><button class="btn text" data-lab-action="geo-hint">Hint</button>':`<button class="btn primary" data-lab-action="geo-next">Next molecule ${icon('arrow')}</button>${s.mode==='explore'?'<button class="btn" data-lab-action="geo-mode" data-value="challenge">Test this shape</button>':''}`}</div>${s.hint?'<div class="geo-hint">Count one domain per bonded atom, plus one per central lone pair. Name that full arrangement first. Then hide the lone pairs: the atoms stay in place.</div>':''}<details class="play-help geo-help"><summary>Why the two names differ</summary><p>Electron-pair geometry includes bonding directions and lone pairs. Molecular structure describes only the nuclei. Single, double, and triple bonds each count as one domain.</p><p>The model uses ideal domain angles. Actual bond angles can be compressed by lone pairs; the feedback gives the appropriate angle description. Colored lobes indicate central lone-pair domains, not extra atoms.</p><p><a href="https://chemlab.truman.edu/chemical-principles/molecular-modeling-1/vespr/" target="_blank" rel="noopener noreferrer">VSEPR reference · Truman State</a> · <a href="https://mccord.cm.utexas.edu/courses/vsepr/index.php" target="_blank" rel="noopener noreferrer">Shape reference · UT Austin</a></p></details></div>`;
+}
+function geoCheck(s){
+ if(s.complete||s.mode!=='challenge')return;
+ const m=geoData(s),errors=[];
+ if(s.answerDomains===''||!s.answerElectron||!s.answerShape){s.feedback={good:false,text:'Choose a domain count and both geometry names before checking.'};return;}
+ if(Number(s.answerDomains)!==m.domains)errors.push('Recount the bonding directions and central lone pairs.');
+ if(s.answerElectron!==GEO_ELECTRON_NAMES[m.domains])errors.push('Electron-pair geometry includes every central lone-pair domain.');
+ if(s.answerShape!==m.shape)errors.push('For molecular structure, hide the lone pairs without moving the atoms.');
+ s.complete=errors.length===0;s.feedback={good:s.complete,text:s.complete?`${m.formula}: ${GEO_ELECTRON_NAMES[m.domains].toLowerCase()} electron-pair geometry; ${m.shape.toLowerCase()} molecular structure.`:errors.join(' ')};
+}
+function geoRefreshModel(s){
+ const model=document.querySelector('#geo-model');if(model)model.innerHTML=geoModel(s);
+ const yaw=document.querySelector('[data-lab-input="geo-yaw"]'),pitch=document.querySelector('[data-lab-input="geo-pitch"]');if(yaw)yaw.value=s.yaw;if(pitch)pitch.value=s.pitch;
+}
+function geoTurn(s,axis,delta){if(axis==='yaw')s.yaw=((s.yaw+delta+540)%360)-180;else s.pitch=Math.max(-80,Math.min(80,s.pitch+delta));geoRefreshModel(s);}
+function geoAct(s,action,el){
+ const d=el.dataset;
+ if(action==='geo-mode'&&['challenge','explore'].includes(d.value)){Object.assign(s,geoNew(s.unit,s.id,d.value,s.family));return;}
+ if(action==='geo-family'&&['all','core','expanded'].includes(d.value)){s.family=d.value;const pool=geoPool(s);if(!pool.some(m=>m.id===s.id))Object.assign(s,geoNew(s.unit,pool[0].id,s.mode,s.family));return;}
+ if(action==='geo-species'&&geoPool(s).some(m=>m.id===d.value)){Object.assign(s,geoNew(s.unit,d.value,s.mode,s.family));return;}
+ if(action==='geo-view'&&['atoms','domains'].includes(d.value)){s.view=d.value;return;}
+ if(action==='geo-answer'&&!s.complete){const allowed={answerDomains:[2,3,4,5,6].map(String),answerElectron:Object.values(GEO_ELECTRON_NAMES),answerShape:GEO_SHAPES};if(allowed[d.field]?.includes(d.value)){s[d.field]=d.value;s.feedback=null;}return;}
+ if(action==='geo-check'){geoCheck(s);return;}
+ if(action==='geo-hint'){s.hint=true;s.view='domains';return;}
+ if(action==='geo-next'){const pool=geoPool(s),index=pool.findIndex(m=>m.id===s.id);Object.assign(s,geoNew(s.unit,pool[(index+1)%pool.length].id,s.mode,s.family));return;}
+ if(action==='geo-rotate'&&['yaw','pitch'].includes(d.axis)&&[-25,25].includes(Number(d.step))){geoTurn(s,d.axis,Number(d.step));return false;}
+ if(action==='geo-reset-view'){Object.assign(s,geoInitialView(s.id));geoRefreshModel(s);return false;}
+}
+function geoChange(s,el){
+ const value=Number(el.value),axis=el.dataset.labInput;if(!Number.isFinite(value))return false;
+ if(axis==='geo-yaw')s.yaw=Math.max(-180,Math.min(180,value));else if(axis==='geo-pitch')s.pitch=Math.max(-80,Math.min(80,value));else return false;
+ geoRefreshModel(s);return false;
+}
+let geoDrag=null;
+document.addEventListener('pointerdown',ev=>{
+ const box=ev.target.closest('[data-geo-drag]');if(!box||G?.mode!=='geometry'||ev.button!==0)return;
+ geoDrag={pointer:ev.pointerId,x:ev.clientX,y:ev.clientY,state:G.state};box.focus({preventScroll:true});ev.preventDefault();
+});
+document.addEventListener('pointermove',ev=>{
+ if(!geoDrag||ev.pointerId!==geoDrag.pointer||G?.mode!=='geometry'||G.state!==geoDrag.state)return;
+ const dx=ev.clientX-geoDrag.x,dy=ev.clientY-geoDrag.y;geoDrag.x=ev.clientX;geoDrag.y=ev.clientY;geoTurn(G.state,'yaw',dx*.55);geoTurn(G.state,'pitch',-dy*.55);ev.preventDefault();
+});
+document.addEventListener('pointerup',()=>{geoDrag=null;});document.addEventListener('pointercancel',()=>{geoDrag=null;});
+document.addEventListener('keydown',ev=>{
+ if(!ev.target.closest('[data-geo-drag]')||G?.mode!=='geometry')return;
+ const moves={ArrowLeft:['yaw',-15],ArrowRight:['yaw',15],ArrowUp:['pitch',15],ArrowDown:['pitch',-15]};
+ if(moves[ev.key]){ev.preventDefault();geoTurn(G.state,...moves[ev.key]);}
+});
+LABS.geometry={title:'Shape lab',description:'Turn 3D molecules. Name both geometries.',icon:'atom',units:['u23','u24'],create:unit=>geoNew(unit),render:geoRender,act:geoAct,change:geoChange};
+
+/* The directory and topic buttons share the same registered lab modules. */
+const GAME_CATEGORIES=[
+ {id:'atoms',title:'Atoms & ions',caption:'Count particles. Fill orbitals.',modes:['ions','orbitals']},
+ {id:'bonding',title:'Molecules & bonding',caption:'Build in 2D. Think in 3D.',modes:['structure','resonance','geometry']},
+ {id:'calculations',title:'Reactions & calculations',caption:'Balance equations. Solve problems.',modes:['balance','equations']},
+ {id:'review',title:'Recall & review',caption:'Put the ideas to work.',modes:['concepts','problems','cards']}
+];
+const TOPIC_LABELS={
+ ions:{u2:['Atoms & ions','Protons, neutrons, and electrons'],u3:['Isotopes','Mass number and particle counts'],u4:['Ionic formulas','Balance charges and name compounds'],u18:['Ionic bonding','Build neutral formula units']},
+ structure:{u19:['Covalent bonds','Single, double, and triple bonds'],u20:['Lewis structures','Count electrons, then build'],u21:['Charges & resonance','Place electrons in charged species'],u23:['Structure → shape','Build a structure and predict its shape'],u24:['Structure → bonding','Hybridization and σ / π bonds']},
+ orbitals:{u15:['Orbital filling','Practice electron arrangements'],u16:['Electron configurations','Ground-state atoms'],u24:['Hybrid orbitals','Hybridization and localized bonding'],u25:['Molecular orbitals','Bond order and magnetism']},
+ balance:{u7:['Balance equations','Conserve every element'],u8:['Reaction types','Balance different reaction families'],u9:['Stoichiometric ratios','Read ratios from coefficients']},
+ resonance:{u21:['Contributors & hybrids','Move electron pairs; combine contributors']},
+ geometry:{u23:['Molecular shapes','Electron geometry vs. molecular structure'],u24:['Shapes & bonding','Connect domains to 3D structure']}
+};
+const topicChapters={};
+function topicLabel(mode,u){return TOPIC_LABELS[mode]?.[u.key]||[u.title||u.t,u.t];}
+function directoryTile(mode){
+ const lab=LABS[mode],review=!lab,title=lab?.title||(mode==='cards'?'Flashcards':'Problem trail');
+ const copy=GAME_COPY[mode]||(mode==='cards'?'Flip terms and equations.':'Solve five problems from one topic.');
+ return `<button class="gc-tile gc-${mode}" data-game="${review?'review-topics':'open-module'}" data-mode="${mode}"><span class="gc-tile-art">${activityArt(mode)}</span><span class="gc-tile-copy"><strong>${e(title)}</strong><span>${e(copy)}</span></span><span class="gc-tile-bottom">Choose a topic ${icon('arrow')}</span></button>`;
+}
+function gamesHub(){return `<section class="gc-directory"><div class="gc-directory-heading"><span class="eyebrow">THE GAME ROOM</span><h1>Chemistry games</h1><p>Choose a skill. Start playing.</p></div><nav class="gc-category-jumps" aria-label="Game categories">${GAME_CATEGORIES.map(c=>`<a href="#games-${c.id}">${e(c.title)}</a>`).join('')}</nav>${GAME_CATEGORIES.map(c=>`<section class="gc-game-category" id="games-${c.id}" aria-labelledby="games-heading-${c.id}"><div class="gc-category-heading"><h2 id="games-heading-${c.id}">${e(c.title)}</h2><p>${e(c.caption)}</p></div><div class="gc-tiles">${c.modes.filter(m=>LABS[m]||['problems','cards'].includes(m)).map(directoryTile).join('')}</div></section>`).join('')}</section>`;}
+function gameTopicButtons(mode,units,current='',review=false){return `<div class="gc-topic-buttons">${units.map(u=>{const [title,detail]=topicLabel(mode,u),selected=u.key===current;return `<button class="gc-topic-button ${selected?'is-selected':''}" ${review?(mode==='cards'?`data-action="cards-unit"`:`data-game="problems"`):`data-game="choose-topic"`} data-unit="${u.key}" ${review?'':`aria-pressed="${selected}"`}><span class="gc-topic-number">§${e(sectionLabel(u))}${selected?'<span aria-hidden="true"> ✓</span>':''}</span><strong>${e(title)}</strong>${detail!==title?`<span class="gc-topic-detail">${e(detail)}</span>`:''}</button>`;}).join('')}</div>`;}
+moduleTopicPicker=function(){
+ const units=U.filter(u=>LABS[G.mode].units.includes(u.key));
+ if(units.length===1)return `<div class="gc-topic-single"><span>Topic</span><strong>${e(topicLabel(G.mode,units[0])[0])}</strong><small>§${e(sectionLabel(units[0]))}</small></div>`;
+ const chapters=[...new Set(units.map(u=>u.ch))],grouped=units.length>6;
+ const chosen=chapters.includes(topicChapters[G.mode])?topicChapters[G.mode]:byUnit(G.unit).ch;
+ const shown=grouped?units.filter(u=>u.ch===chosen):units;
+ return `<section class="gc-topic-picker" id="module-topics" aria-labelledby="module-topics-title"><div class="gc-topic-heading"><h2 id="module-topics-title">Choose a topic</h2><span>Tap a button to start</span></div>${grouped?`<div class="gc-topic-chapters" role="group" aria-label="Topic chapters">${chapters.map(ch=>`<button data-game="topic-chapter" data-chapter="${ch}" aria-pressed="${chosen===ch}">Ch. ${ch}<span>${e(CH[ch].name)}</span></button>`).join('')}</div>`:''}${gameTopicButtons(G.mode,shown,G.unit)}${grouped&&chosen!==byUnit(G.unit).ch?`<p class="gc-current-topic">Playing: §${e(sectionLabel(byUnit(G.unit)))} · ${e(topicLabel(G.mode,byUnit(G.unit))[0])}</p>`:''}</section>`;
+};
+function reviewTopics(){const mode=V.reviewMode==='cards'?'cards':'problems',title=mode==='cards'?'Flashcards':'Problem trail';return `<div class="gc-review-topics"><button class="btn text" data-action="nav" data-view="games">${icon('back')} All games</button><div class="page-head"><h1>${title}</h1></div><p class="muted">Choose a section.</p>${CH.slice(1).map((c,i)=>{const units=U.filter(u=>u.ch===i+1&&(mode==='cards'?CARDS.some(x=>x.unit===u.key):Q.some(x=>x.unit===u.key)));return units.length?`<details class="gc-review-chapter" ${i===0?'open':''}><summary><span>Chapter ${i+1}</span> ${e(c.name)}</summary>${gameTopicButtons(mode,units,'',true)}</details>`:'';}).join('')}</div>`;}
+document.addEventListener('click',ev=>{
+ const b=ev.target.closest('[data-game]');if(!b||b.disabled)return;
+ const action=b.dataset.game;
+ if(action==='choose-topic'&&V.view==='lab'&&G&&LABS[G.mode].units.includes(b.dataset.unit)&&G.unit!==b.dataset.unit){const mode=G.mode,entry=G.entry;topicChapters[mode]=byUnit(b.dataset.unit).ch;launchLab(mode,b.dataset.unit,entry);$(`[data-game="choose-topic"][data-unit="${b.dataset.unit}"]`)?.focus({preventScroll:true});}
+ if(action==='topic-chapter'&&V.view==='lab'&&G){const ch=Number(b.dataset.chapter);if(!LABS[G.mode].units.some(k=>byUnit(k).ch===ch))return;topicChapters[G.mode]=ch;const picker=$('#module-topics');if(picker){picker.outerHTML=moduleTopicPicker();$(`[data-game="topic-chapter"][data-chapter="${ch}"]`)?.focus({preventScroll:true});}}
+ if(action==='review-topics'&&['problems','cards'].includes(b.dataset.mode))go('game-topics',{reviewMode:b.dataset.mode});
+});
 
 /* Feedback stays in memory until the student opens an email draft or copies it. */
 const SUGGESTION_EMAIL='amirlobe@usc.edu';
