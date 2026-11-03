@@ -6,7 +6,7 @@ There are no nested folders. index.html is the website entry point.
 UPDATING YOUR GITHUB SITE
 1. Unzip this package on your computer.
 2. Open your repository, choose Add file > Upload files.
-3. Drag all nine extracted files into the upload area (not the ZIP).
+3. Drag all ten extracted files into the upload area (not the ZIP).
 4. Commit the changes. Files with matching names replace the previous versions.
 5. If Pages is already configured, wait for its deployment to finish, then refresh.
    For a new site: Settings > Pages > Deploy from a branch > main > / (root).
@@ -48,7 +48,7 @@ current visit.
 
 SCIENCE & SCOPE
 Original exercises follow the supplied lectures and exams and map to Chemistry 2e.
-Chapter 9 is still exam-supported; Chapter 8 now includes Lectures 26–28.
+Chapter 8 includes Lectures 26–28. Chapter 9 includes Lectures 29–31 for §§9.1–9.5; §9.6 remains exam-supported.
 The Lewis builder starts with unconnected atoms on a fixed scaffold.
 Resonance exercises use equivalent contributors on fixed atom frameworks.
 The shape models are idealized VSEPR teaching models, not measured geometries.
@@ -57,4 +57,8 @@ MO order is displayed. Hints/solutions are marked as assisted practice.
 
 PACKAGE FILES
 index.html, favicon.svg, favicon.ico, favicon-32.png, apple-touch-icon.png,
-icon-192.png, icon-512.png, site.webmanifest, README.txt
+icon-192.png, icon-512.png, site.webmanifest, README.txt, UPLOAD.txt
+
+CONTENT UPDATE: Lectures 29–31
+Chapter 9 now includes gas laws, partial pressures, gas stoichiometry, diffusion, effusion, and kinetic-molecular theory, with 66 new original practice questions, expanded recall cards, worked examples, gas calculations in Equation Lab, and original speed-distribution charts.
+The existing analytics tag, site switcher, games, and browser-save format are preserved.
